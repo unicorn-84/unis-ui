@@ -1,7 +1,6 @@
 {
   "name": "unis",
   "description": "UI components for react.js websites and apps",
-  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -101,5 +100,6 @@
   },
   "dependencies": {
     "styled-components": "^5.2.1"
-  }
+  },
+  "version": "0.1.0"
 }
