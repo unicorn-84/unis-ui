@@ -1,8 +1,8 @@
 {
   "name": "unis",
   "description": "UI components for react.js websites and apps",
-  "version": "0.1.0",
   "license": "MIT",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
