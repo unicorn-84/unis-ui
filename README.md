@@ -13,20 +13,20 @@ You can install Unis using either of the methods given below.
 For npm users:
 
 ```shell
-  npm i unicorn-84/unis
+  npm i @web-uni/unis
 ```
 
 For Yarn users:
 
 ```shell
-  yarn add unicorn-84/unis
+  yarn add @web-uni/unis
 ```
 
 ## Explore
 
 Storybook examples per component.
 
-[Bit.dev](https://bit.dev/unicorn-84/unis) playground for each component.
+[Bit.dev](https://bit.dev/web-uni/unis) playground for each component.
 
 ## Releases History
 
