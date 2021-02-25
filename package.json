@@ -1,5 +1,5 @@
 {
-  "name": "unis",
+  "name": "@web-uni/unis",
   "description": "UI components for react.js websites and apps",
   "license": "MIT",
   "version": "0.1.0",
@@ -16,6 +16,7 @@
     "node": ">=10"
   },
   "keywords": [
+    "@web-uni",
     "unis",
     "react",
     "components",
