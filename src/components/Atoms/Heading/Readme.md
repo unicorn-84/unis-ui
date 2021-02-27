@@ -5,7 +5,7 @@ Heading text.
 ## Usage
 
 ```javascript
-import { Heading } from 'unicorn-84/unis';
+import { Heading } from '@web-uni/unis';
 <Heading level="h1" variant="title">Heading text</Heading>
 ```
 
