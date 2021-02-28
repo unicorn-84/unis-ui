@@ -42,11 +42,13 @@
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
     "preversion": "npm run lint && npm test",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "chromatic": "npx chromatic --project-token d8bd76e0e615 --exit-zero-on-changes"
   },
   "peerDependencies": {
     "react": ">=16"
   },
+
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -80,9 +82,9 @@
     "@storybook/addon-essentials": "^6.1.15",
     "@storybook/addon-info": "^5.3.21",
     "@storybook/addon-links": "^6.1.15",
-    "@storybook/addons": "^6.1.15",
+    "@storybook/addons": "^6.1.20",
     "@storybook/react": "^6.1.15",
-    "@storybook/theming": "^6.1.15",
+    "@storybook/theming": "^6.1.20",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@types/jest-axe": "^3.5.1",
@@ -90,6 +92,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
     "babel-loader": "^8.2.2",
+    "chromatic": "^5.6.3",
     "husky": "^4.3.8",
     "jest-axe": "^4.1.0",
     "react": "^17.0.1",
