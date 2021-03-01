@@ -43,4 +43,18 @@ export const defaultTypeScale: Partial<ITypeScale> = {
     marginTop: '26px',
     marginBottom: '0px',
   }),
+  body: createFont(defaultStyles, {
+    fontSize: '16px',
+    fontWeight: 400,
+    lineHeight: '26px',
+    marginTop: '26px',
+    marginBottom: '0px',
+  }),
+  text: createFont(defaultStyles, {
+    fontSize: '16px',
+    fontWeight: 400,
+    lineHeight: '26px',
+    marginTop: '0px',
+    marginBottom: '0px',
+  }),
 };
