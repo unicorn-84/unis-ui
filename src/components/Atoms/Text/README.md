@@ -1,12 +1,12 @@
 # Text
 
-Arbitrary text.
+Paragraph text.
 
 ## Usage
 
 ```javascript
 import { Text } from '@web-uni/unis';
-<Text tag="p" variant="body">Arbitrary text</Text>
+<Text variant="body">Paragraph text</Text>
 ```
 
 ## Properties
@@ -41,16 +41,6 @@ Custom label to be used by screen readers. When provided, an aria-label will be 
 
 *Default:*
 
-### tag
-
-The DOM tag.
-
-*Type:* "p" | "span"
-
-*Required:* true
-
-*Default:*
-
 ### variant
 
 A arbitrary text can define its look via defined variants.
@@ -64,5 +54,5 @@ A arbitrary text can define its look via defined variants.
 ## Intrinsic element
 
 ```
-p | span
+p
 ```

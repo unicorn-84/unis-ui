@@ -1,8 +1,7 @@
 import React, { FC, HTMLAttributes, ReactNode } from 'react';
 import StyledText from './Text.styles';
 
-export interface TextProps
-  extends HTMLAttributes<HTMLParagraphElement | HTMLSpanElement> {
+export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   /**
    * The content of the component.
    */
@@ -19,26 +18,10 @@ export interface TextProps
    * Applies the theme typography styles.
    */
   variant: 'body' | 'text';
-  /**
-   * The DOM tag.
-   */
-  tag: 'p' | 'span';
 }
 
-const Text: FC<TextProps> = ({
-  className,
-  a11yLabel,
-  tag,
-  children,
-  variant,
-}) => (
-  <StyledText
-    className={className}
-    aria-label={a11yLabel}
-    as={tag}
-    tag={tag}
-    variant={variant}
-  >
+const Text: FC<TextProps> = ({ className, a11yLabel, children, variant }) => (
+  <StyledText className={className} aria-label={a11yLabel} variant={variant}>
     {children}
   </StyledText>
 );
