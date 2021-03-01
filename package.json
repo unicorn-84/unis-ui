@@ -42,8 +42,7 @@
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
     "preversion": "npm run lint && npm test",
-    "postversion": "git push && git push --tags",
-    "chromatic": "npx chromatic --project-token d8bd76e0e615 --exit-zero-on-changes"
+    "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
     "react": ">=16"
