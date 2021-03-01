@@ -8,7 +8,7 @@ import Text from '.';
 describe('Text', () => {
   it('renders', () => {
     render(
-      <Text tag="p" variant="body">
+      <Text variant="body">
         <strong>Text component</strong>
       </Text>,
     );
@@ -16,7 +16,7 @@ describe('Text', () => {
   });
   test('has the class attribute', () => {
     render(
-      <Text tag="p" variant="body" className="class">
+      <Text variant="body" className="class">
         Text component
       </Text>,
     );
@@ -24,7 +24,7 @@ describe('Text', () => {
   });
   test('should have no accessibility violations', async () => {
     const { container } = render(
-      <Text tag="p" variant="body" a11yLabel="1">
+      <Text variant="body" a11yLabel="1">
         Text component
       </Text>,
     );

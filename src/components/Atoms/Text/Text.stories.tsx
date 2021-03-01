@@ -7,23 +7,11 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Arbitrary text.',
+        component: 'Paragraph text.',
       },
     },
   },
   argTypes: {
-    tag: {
-      description: 'The DOM tag.',
-      table: {
-        type: {
-          summary: 'p | span',
-        },
-      },
-      control: {
-        type: 'select',
-        options: ['p', 'span'],
-      },
-    },
     variant: {
       description: 'Applies the theme typography styles.',
       table: {
@@ -46,6 +34,5 @@ const Template: Story<TextProps> = args => (
 export const Text = Template.bind({});
 
 Text.args = {
-  tag: 'p',
   variant: 'body',
 };
