@@ -122,15 +122,7 @@ export interface ITypeScale {
    */
   body: Partial<ITypeStyle>;
   /**
-   * Strong arbitrary text.
+   * Arbitrary text.
    */
-  strong: Partial<ITypeStyle>;
-  /**
-   * Small arbitrary text.
-   */
-  small: Partial<ITypeStyle>;
-  /**
-   * Button text.
-   */
-  button: Partial<ITypeStyle>;
+  text: Partial<ITypeStyle>;
 }
