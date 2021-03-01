@@ -41,8 +41,7 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
-    "preversion": "npm run lint && npm test",
-    "postversion": "git push && git push --tags"
+    "preversion": "npm run lint && npm test"
   },
   "peerDependencies": {
     "react": ">=16"
