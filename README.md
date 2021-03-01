@@ -26,8 +26,6 @@ For Yarn users:
 
 [Storybook](https://master--6039faf22bc1890023504a43.chromatic.com) examples per component.
 
-[Bit.dev](https://bit.dev/web-uni/unis) playground for each component.
-
 ## Releases History
 
 See the [Change Log](https://github.com/unicorn-84/unis/wiki/Change-Log).
