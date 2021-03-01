@@ -22,9 +22,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - name: Install deps and build (with cache)
+      uses: bahmutov/npm-install@v1
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Test
+      run: yarn test --ci --coverage --maxWorkers=2
+
+    - name: Build
+      run: yarn build
