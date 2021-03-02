@@ -7,7 +7,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Paragraph text.',
+        component: 'Arbitrary text.',
       },
     },
   },
@@ -16,12 +16,30 @@ export default {
       description: 'Applies the theme typography styles.',
       table: {
         type: {
-          summary: 'body | text',
+          summary: 'text | strong | small | button',
+        },
+        defaultValue: {
+          summary: 'text',
         },
       },
       control: {
         type: 'select',
-        options: ['body', 'text'],
+        options: ['text', 'strong', 'small', 'button'],
+      },
+    },
+    tag: {
+      description: 'The DOM tag.',
+      table: {
+        type: {
+          summary: 'span',
+        },
+        defaultValue: {
+          summary: 'span',
+        },
+      },
+      control: {
+        type: 'select',
+        options: ['span'],
       },
     },
   },
@@ -32,7 +50,3 @@ const Template: Story<TextProps> = args => (
 );
 
 export const Text = Template.bind({});
-
-Text.args = {
-  variant: 'body',
-};
