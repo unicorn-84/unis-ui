@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Heading } from '../src';
+import { Heading, Text } from '../src';
 
 interface AppProps {}
 
@@ -22,6 +22,10 @@ const App: React.FC<AppProps> = () => {
       <Heading level="h1" variant="subtitle">
         Heading component
       </Heading>
+      <Text>Arbitrary text.</Text>
+      <Text variant="strong"> Strong text.</Text>
+      <Text variant="small"> Small text.</Text>
+      <Text variant="button"> Button text.</Text>
     </div>
   );
 };
