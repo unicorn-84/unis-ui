@@ -7,7 +7,7 @@ export const defaultPalette: IPalette = {
   brandSecondary: '#acc1f6',
   brandTertiary: '#cdc2f8',
   primaryText: '#0a0a0a',
-  secondaryText: '#333',
+  secondaryText: '#111',
   lightText: '#fff',
   grayText: '#bbb',
   darkColor: '#0a0a0a',
