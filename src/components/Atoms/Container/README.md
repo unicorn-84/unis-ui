@@ -6,7 +6,7 @@ The container centers your content horizontally.
 
 ```javascript
 import { Container } from '@web-uni/unis';
-<Heading level="h1" variant="title">Heading text</Heading>
+<Container>Content</Container>
 ```
 
 ## Properties
@@ -31,38 +31,28 @@ Class to be applied to the root element.
 
 *Default:*
 
-### a11yLabel
+### disableGutters
 
-Custom label to be used by screen readers. When provided, an aria-label will be added to the element.
+If 'true', the left and right padding is removed.
 
-*Type:* string
+*Type:* "true" | "false"
 
 *Required:* false
 
-*Default:*
+*Default:* false
 
-### level
+### maxWidth
 
-The heading level.
+Determine the max-width of the container.
 
-*Type:* "h1" | "h2" | "h3" | "h4"
+*Type:* "xs" | "sm" | "md" | "lg" | "xl"
 
-*Required:* true
-
-*Default:*
-
-### variant
-
-A heading text can define its look via defined variants.
-
-*Type:* "title" | "h2" | "h3" | "h4"
-
-*Required:* true
+*Required:* false
 
 *Default:*
 
 ## Intrinsic element
 
 ```
-h1 | h2 | h3 | h4
+div
 ```

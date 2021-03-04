@@ -16,7 +16,6 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   disableGutters?: boolean;
   /**
    * Determine the max-width of the container.
-   * The container width grows with the size of the screen.
    */
   maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 }
