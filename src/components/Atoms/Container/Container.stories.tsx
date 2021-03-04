@@ -12,30 +12,33 @@ export default {
     },
   },
   argTypes: {
-    // level: {
-    //   description: 'The heading level.',
-    //   table: {
-    //     type: {
-    //       summary: 'h1 | h2 | h3 | h4',
-    //     },
-    //   },
-    //   control: {
-    //     type: 'select',
-    //     options: ['h1', 'h2', 'h3', 'h4'],
-    //   },
-    // },
-    // variant: {
-    //   description: 'Applies the theme typography styles.',
-    //   table: {
-    //     type: {
-    //       summary: 'title | h2 | h3 | h4 | subtitle',
-    //     },
-    //   },
-    //   control: {
-    //     type: 'select',
-    //     options: ['title', 'h2', 'h3', 'h4', 'subtitle'],
-    //   },
-    // },
+    disableGutters: {
+      description: "If 'true', the left and right padding is removed.",
+      table: {
+        type: {
+          summary: 'true | false',
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+      control: {
+        type: 'select',
+        options: [true, false],
+      },
+    },
+    maxWidth: {
+      description: 'Determine the max-width of the container.',
+      table: {
+        type: {
+          summary: 'xs | sm | md | lg | xl',
+        },
+      },
+      control: {
+        type: 'select',
+        options: ['xs', 'sm', 'md', 'lg', 'xl'],
+      },
+    },
   },
 } as Meta;
 
