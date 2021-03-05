@@ -24,8 +24,7 @@ export default {
         },
       },
       control: {
-        type: 'select',
-        options: [true, false],
+        type: 'boolean',
       },
     },
     maxWidth: {
