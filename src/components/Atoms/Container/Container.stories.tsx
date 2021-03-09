@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import ContainerComponent, { ContainerProps } from '.';
-import { Heading, Text, Paragraph } from '../';
+import { Heading, Text, Paragraph } from '../../Typography';
 
 export default {
   title: 'Design System/Atoms/Container',

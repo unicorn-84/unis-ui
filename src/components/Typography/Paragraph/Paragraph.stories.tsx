@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import ParagraphComponent, { ParagraphProps } from '.';
 
 export default {
-  title: 'Design System/Atoms/Paragraph',
+  title: 'Design System/Typography/Paragraph',
   parameters: {
     docs: {
       description: {

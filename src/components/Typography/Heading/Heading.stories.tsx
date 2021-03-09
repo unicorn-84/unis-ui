@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import HeadingComponent, { HeadingProps } from '.';
 
 export default {
-  title: 'Design System/Atoms/Heading',
+  title: 'Design System/Typography/Heading',
   parameters: {
     docs: {
       description: {
