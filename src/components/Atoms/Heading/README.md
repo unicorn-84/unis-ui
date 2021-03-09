@@ -1,6 +1,3 @@
-<!---
-  TODO: Change the file name to README.md
--->
 # Heading
 
 Heading text.
