@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import TextComponent, { TextProps } from '.';
 
 export default {
-  title: 'Design System/Atoms/Text',
+  title: 'Design System/Typography/Text',
   parameters: {
     docs: {
       description: {
