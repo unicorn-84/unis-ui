@@ -7,11 +7,6 @@ describe('Container', () => {
     render(<Container>Content</Container>);
     expect(screen.getByText('Content')).toBeInTheDocument();
   });
-  test('has the class attribute', () => {
-    render(<Container className="class">Content</Container>);
-    expect(screen.getByText('Content')).toHaveAttribute('class');
-  });
-
   test('should support maxWidth values', () => {
     render(<Container maxWidth="xs">Content</Container>);
     expect(screen.getByText('Content')).toBeInTheDocument();
