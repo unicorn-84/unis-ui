@@ -1,19 +1,7 @@
-import React, { FC, HTMLAttributes, ReactNode } from 'react';
+import React, { FC, HTMLAttributes } from 'react';
 import StyledText from './Text.styles';
 
 export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
-  /**
-   * The content of the component.
-   */
-  children?: ReactNode;
-  /**
-   * Class to be applied to the root element.
-   */
-  className?: string;
-  /**
-   * Custom label to be used by screen readers. When provided, an aria-label will be added to the element.
-   */
-  a11yLabel?: string;
   /**
    * Applies the theme typography styles.
    */
@@ -25,18 +13,12 @@ export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const Text: FC<TextProps> = ({
-  className,
-  a11yLabel,
   children,
   variant = 'text',
   tag = 'span',
+  ...props
 }) => (
-  <StyledText
-    className={className}
-    aria-label={a11yLabel}
-    variant={variant}
-    tag={tag}
-  >
+  <StyledText variant={variant} tag={tag} {...props}>
     {children}
   </StyledText>
 );
