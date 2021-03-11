@@ -79,6 +79,4 @@ const Template: Story<ContainerProps> = args => (
 
 export const Container = Template.bind({});
 
-Container.args = {
-  disableGutters: false,
-};
+Container.args = {};
