@@ -13,8 +13,12 @@ export default {
   },
   argTypes: {
     src: {
+      description:
+        'The HTML "src" attribute, specifies the image to display in the <img> element.',
       table: {
-        disable: true,
+        type: {
+          summary: 'string',
+        },
       },
     },
     alt: {
@@ -23,7 +27,7 @@ export default {
       },
     },
     placeholder: {
-      description: 'The placeholder',
+      description: 'The placeholder.',
       table: {
         type: {
           summary: 'string',
@@ -46,8 +50,8 @@ Simple.args = {
 export const Placeholder = Template.bind({});
 
 Placeholder.args = {
-  ...Simple.args,
-  src: null,
+  src: 'bad uri',
+  alt: 'The lamp.',
   placeholder:
     'https://res.cloudinary.com/unicorn84/image/upload/c_scale,e_blur:2000,q_auto:low,w_800/v1591287502/lamp.webp',
 };
