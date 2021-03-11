@@ -11,26 +11,6 @@ import { Container } from '@web-uni/unis';
 
 ## Properties
 
-### children
-
-The content of the component.
-
-*Type:* node
-
-*Required:* false
-
-*Default:*
-
-### className
-
-Class to be applied to the root element.
-
-*Type:* string
-
-*Required:* false
-
-*Default:*
-
 ### disableGutters
 
 If 'true', the left and right padding is removed.
