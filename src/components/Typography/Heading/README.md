@@ -6,50 +6,20 @@ Heading text.
 
 ```javascript
 import { Heading } from '@web-uni/unis';
-<Heading level="h1" variant="title">Heading text</Heading>
+<Heading>Heading text</Heading>
 ```
 
 ## Properties
-
-### children
-
-The content of the component.
-
-*Type:* node
-
-*Required:* false
-
-*Default:*
-
-### className
-
-Class to be applied to the root element.
-
-*Type:* string
-
-*Required:* false
-
-*Default:*
-
-### a11yLabel
-
-Custom label to be used by screen readers. When provided, an aria-label will be added to the element.
-
-*Type:* string
-
-*Required:* false
-
-*Default:*
 
 ### level
 
 The heading level.
 
-*Type:* "h1" | "h2" | "h3" | "h4"
+*Type:* "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 
-*Required:* true
+*Required:* false
 
-*Default:*
+*Default:* "h1"
 
 ### variant
 
@@ -57,12 +27,12 @@ A heading text can define its look via defined variants.
 
 *Type:* "title" | "h2" | "h3" | "h4"
 
-*Required:* true
+*Required:* false
 
-*Default:*
+*Default:* "title"
 
 ## Intrinsic element
 
 ```
-h1 | h2 | h3 | h4
+h1 | h2 | h3 | h4 | h5 | h6
 ```
