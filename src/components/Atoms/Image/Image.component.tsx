@@ -19,8 +19,6 @@ export default ({ src, placeholder, ...props }: ImageProps) => {
     const img = new Image();
     img.src = src as string;
     img.addEventListener('load', handleLoad);
-    // FIXME:
-    img.addEventListener('error', () => console.log('error'));
 
     return () => img.removeEventListener('load', handleLoad);
   }, [src]);
