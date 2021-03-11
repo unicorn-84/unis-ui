@@ -25,7 +25,9 @@ export default {
     placeholder: {
       description: 'The placeholder',
       table: {
-        summary: 'string',
+        type: {
+          summary: 'string',
+        },
       },
     },
   },
