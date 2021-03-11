@@ -59,6 +59,4 @@ const Template: Story<ParagraphProps> = args => (
 
 export const Paragraph = Template.bind({});
 
-Paragraph.args = {
-  variant: 'body',
-};
+Paragraph.args = {};
