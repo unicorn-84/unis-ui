@@ -51,7 +51,4 @@ const Template: Story<TextProps> = args => (
 
 export const Text = Template.bind({});
 
-Text.args = {
-  tag: 'span',
-  variant: 'text',
-};
+Text.args = {};
