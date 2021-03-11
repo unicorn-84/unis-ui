@@ -16,12 +16,15 @@ export default {
       description: 'The heading level.',
       table: {
         type: {
-          summary: 'h1 | h2 | h3 | h4',
+          summary: 'h1 | h2 | h3 | h4 | h5 | h6',
+        },
+        defaultValue: {
+          summary: 'h1',
         },
       },
       control: {
         type: 'select',
-        options: ['h1', 'h2', 'h3', 'h4'],
+        options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
       },
     },
     variant: {
@@ -29,6 +32,9 @@ export default {
       table: {
         type: {
           summary: 'title | h2 | h3 | h4 | subtitle',
+        },
+        defaultValue: {
+          summary: 'title',
         },
       },
       control: {
@@ -47,7 +53,4 @@ const Template: Story<HeadingProps> = args => (
 
 export const Heading = Template.bind({});
 
-Heading.args = {
-  level: 'h1',
-  variant: 'title',
-};
+Heading.args = {};
