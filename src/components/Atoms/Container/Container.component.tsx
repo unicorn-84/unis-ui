@@ -1,15 +1,7 @@
-import React, { FC, HTMLAttributes, ReactNode } from 'react';
+import React, { FC, HTMLAttributes } from 'react';
 import StyledContainer from './Container.styles';
 
 export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
-  /**
-   * The content of the component.
-   */
-  children?: ReactNode;
-  /**
-   * Class to be applied to the root element.
-   */
-  className?: string;
   /**
    * If 'true', the left and right padding is removed.
    */
@@ -22,14 +14,14 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 
 const Container: FC<ContainerProps> = ({
   children,
-  className,
   disableGutters = false,
   maxWidth,
+  ...props
 }) => (
   <StyledContainer
-    className={className}
     disableGutters={disableGutters}
     maxWidth={maxWidth}
+    {...props}
   >
     {children}
   </StyledContainer>
