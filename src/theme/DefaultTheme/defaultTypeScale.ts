@@ -5,6 +5,7 @@ const defaultFontFamily: string = 'Montserrat, sans-serif';
 
 const defaultStyles: Partial<ITypeStyle> = {
   fontFamily: defaultFontFamily,
+  // TODO: Добавить margin-bottom: '0px' и margin-top: '0px'.
 };
 
 export const defaultTypeScale: Partial<ITypeScale> = {
