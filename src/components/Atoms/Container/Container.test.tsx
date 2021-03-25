@@ -3,16 +3,16 @@ import { render, screen } from '@testing-library/react';
 import Container from '.';
 
 describe('Container', () => {
-  it('renders', () => {
+  it('renders Container correctly', () => {
     render(<Container>Content</Container>);
     expect(screen.getByText('Content')).toBeInTheDocument();
   });
-  test('should support maxWidth values', () => {
+  test('renders Container with maxWidth correctly', () => {
     render(<Container maxWidth="xs">Content</Container>);
     expect(screen.getByText('Content')).toBeInTheDocument();
   });
 
-  test('should support disableGutters', () => {
+  test('renders Container with disableGutters correctly', () => {
     render(<Container disableGutters>Content</Container>);
     expect(screen.getByText('Content')).toBeInTheDocument();
   });
