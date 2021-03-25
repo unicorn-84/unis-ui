@@ -11,10 +11,6 @@ export interface IPalette {
    */
   brandSecondary: string;
   /**
-   * Color code for brandTertiary.
-   */
-  brandTertiary: string;
-  /**
    * Color code for primaryText.
    */
   primaryText: string;
@@ -39,13 +35,9 @@ export interface IPalette {
    */
   lightColor: string;
   /**
-   * Color code for accentColor.
+   * Color code for grayColor.
    */
-  accentColor: string;
-  /**
-   * Color code for errorColor.
-   */
-  errorColor: string;
+  grayColor: string;
   /**
    * Color code for darkFon.
    */
@@ -54,8 +46,4 @@ export interface IPalette {
    * Color code for lightFon.
    */
   lightFon: string;
-  /**
-   * Color code for grayFon.
-   */
-  grayFon: string;
 }
