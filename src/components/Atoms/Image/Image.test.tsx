@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import Image from '.';
 
 describe('Image', () => {
-  it('renders', () => {
+  it('renders Image correctly', () => {
     render(
       <Image
         src="https://res.cloudinary.com/unicorn84/image/upload/c_scale,q_auto,w_800/v1591287502/lamp.webp"
@@ -13,7 +13,7 @@ describe('Image', () => {
     expect(screen.getByAltText('The lamp')).toBeInTheDocument();
   });
 
-  it('renders with placeholder', () => {
+  it('renders Image with placeholder correctly', () => {
     render(
       <Image
         src="bad-uri"
