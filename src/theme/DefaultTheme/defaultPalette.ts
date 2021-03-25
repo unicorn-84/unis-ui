@@ -3,18 +3,15 @@ import { IPalette } from '../types';
  * Default palette.
  */
 export const defaultPalette: IPalette = {
-  brandPrimary: '#ace6f6',
-  brandSecondary: '#acc1f6',
-  brandTertiary: '#cdc2f8',
+  brandPrimary: '#3d0240',
+  brandSecondary: '#137083',
   primaryText: '#0a0a0a',
   secondaryText: '#111',
   lightText: '#fff',
-  grayText: '#bbb',
+  grayText: '#b7b7b7',
   darkColor: '#0a0a0a',
-  lightColor: '#fafafa',
-  accentColor: '#ebeeee',
-  errorColor: '#ba1a1a',
+  lightColor: '#fff',
+  grayColor: 'b7b7b7',
   darkFon: '#0a0a0a',
-  lightFon: '#fafafa',
-  grayFon: '#ccc',
+  lightFon: '#fff',
 };
