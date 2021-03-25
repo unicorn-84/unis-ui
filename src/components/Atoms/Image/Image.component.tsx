@@ -8,7 +8,7 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   placeholder?: string;
 }
 
-export default ({ src, placeholder, ...props }: ImageProps) => {
+const ImageComponent = ({ src, placeholder, ...props }: ImageProps) => {
   const [srcState, setSrcState] = useState(placeholder || src);
 
   useEffect(() => {
@@ -25,3 +25,7 @@ export default ({ src, placeholder, ...props }: ImageProps) => {
 
   return <StyledImage {...props} src={srcState} />;
 };
+
+ImageComponent.displayName = 'Image';
+
+export default ImageComponent;
