@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Container, Image } from '../src';
-import './index.css';
+import { Container, Heading, Image, Link, Text } from '../src';
 
 interface AppProps {}
 
@@ -16,6 +15,9 @@ const App: React.FC<AppProps> = () => {
           loading="lazy"
         />
       </Container>
+      <Link href="#" disabled>
+        Text
+      </Link>
     </div>
   );
 };
