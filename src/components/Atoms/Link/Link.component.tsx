@@ -12,7 +12,7 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   underline?: 'none' | 'always';
 }
 
-export default ({
+const Link = ({
   children,
   disabled = false,
   underline,
@@ -35,3 +35,5 @@ export default ({
     </StyledLink>
   );
 };
+
+export default Link;
