@@ -6,10 +6,10 @@ import { IBreakpoints } from './IBreakpoints';
 
 export interface ITheme {
   name: string;
-  palette?: Partial<IPalette>;
-  typography?: Partial<ITypeScale>;
-  effects?: Partial<IEffects>;
-  spacing?: Partial<ISpacing>;
-  breakpoints?: IBreakpoints;
+  palette: IPalette;
+  typography: ITypeScale;
+  effects: IEffects;
+  spacing: ISpacing;
+  breakpoints: IBreakpoints;
   // components?: Partial<IComponents>;
 }
