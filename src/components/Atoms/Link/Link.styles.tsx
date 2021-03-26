@@ -37,7 +37,7 @@ const underlineStyles = (underline: LinkProps['underline']) => {
 };
 
 const StyledLink = styled.a<LinkProps>`
-  color: ${theme.palette?.secondaryBrand} !important;
+  color: ${theme.palette?.brand?.secondary} !important;
   cursor: pointer;
 
   ${({ disabled }) => disabled && disabledStyles}
