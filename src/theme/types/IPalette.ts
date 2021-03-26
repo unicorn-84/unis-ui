@@ -3,51 +3,39 @@
  */
 export interface IPalette {
   /**
-   * Color code for primaryBrand.
+   * Code for Brand colors.
    */
-  primaryBrand: string;
+  brand: {
+    primary: string;
+    secondary: string;
+  };
   /**
-   * Color code for secondaryBrand.
+   * Code for Text colors.
    */
-  secondaryBrand: string;
+  text: {
+    primary: string;
+    secondary: string;
+    light: string;
+    gray: string;
+  };
   /**
-   * Color code for primaryText.
+   * Code for dark color.
    */
-  primaryText: string;
+  dark: string;
   /**
-   * Color code for secondaryText.
+   * Code for light color.
    */
-  secondaryText: string;
+  light: string;
   /**
-   * Color code for lightText.
+   * Code for gray color.
    */
-  lightText: string;
+  gray: string;
   /**
-   * Color code for grayText.
+   * Code for Fon colors.
    */
-  grayText: string;
-  /**
-   * Color code for darkColor.
-   */
-  darkColor: string;
-  /**
-   * Color code for lightColor.
-   */
-  lightColor: string;
-  /**
-   * Color code for grayColor.
-   */
-  grayColor: string;
-  /**
-   * Color code for darkFon.
-   */
-  darkFon: string;
-  /**
-   * Color code for lightFon.
-   */
-  lightFon: string;
-  /**
-   * Color code for grayFon.
-   */
-  grayFon: string;
+  fon: {
+    dark: string;
+    light: string;
+    gray: string;
+  };
 }
