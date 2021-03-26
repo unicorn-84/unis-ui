@@ -1,17 +1,20 @@
 import styled, { css } from 'styled-components';
+import { hexToChannels } from '../../../utils';
 import { ButtonProps } from '.';
 import { DefaultTheme as theme } from '../../../theme';
 
+hexToChannels(theme.palette?.brand?.primary);
+
 const primaryColorStyles = css`
-  background-color: ${theme.palette?.brandPrimary};
-  color: ${theme.palette?.brandPrimary};
-  border-color: ${theme.palette?.brandPrimary};
+  background-color: ${theme.palette?.brand?.primary};
+  color: ${theme.palette?.brand?.primary};
+  border-color: ${theme.palette?.brand?.primary};
 `;
 
 const secondaryColorStyles = css`
-  background-color: ${theme.palette?.brandSecondary};
-  color: ${theme.palette?.brandSecondary};
-  border-color: ${theme.palette?.brandSecondary};
+  background-color: ${theme.palette?.brand?.secondary};
+  color: ${theme.palette?.brand?.secondary};
+  border-color: ${theme.palette?.brand?.secondary};
 `;
 
 const baseButtonStyles = css`
@@ -33,9 +36,9 @@ const baseButtonStyles = css`
 const disabledStyles = css`
   pointer-events: none;
   user-select: none;
-  background-color: ${theme.palette?.grayFon};
-  color: ${theme.palette?.lightColor};
-  border-color: ${theme.palette?.grayFon};
+  background-color: ${theme.palette?.fon?.gray};
+  color: ${theme.palette?.light};
+  border-color: ${theme.palette?.fon?.gray};
 `;
 
 const fullWidthStyles = css`
@@ -49,29 +52,36 @@ const outlinedStyles = css`
 `;
 
 const containedStyles = css`
-  color: ${theme.palette?.lightColor};
+  color: ${theme.palette?.light};
 `;
 
 const textStyles = (color: ButtonProps['color']) => {
-  return css`
-    background-color: transparent;
+  switch (color) {
+    case 'primary':
+      return css`
+        color: ${theme.palette?.brand?.primary};
+        background-color: transparent;
 
-    :hover,
-    :focus {
-      background-color: rgba(rgb(61, 2, 64), 0.1);
-    }
-  `;
+        :hover,
+        :focus {
+          background-color: rgba($);
+        }
+      `;
+    case 'secondary':
+      return css`
+        color: ${theme.palette?.brand?.secondary};
+        background-color: transparent;
+      `;
+    default:
+      return;
+  }
 };
 
 const StyledButton = styled.button<ButtonProps>`
   ${baseButtonStyles};
 
   ${({ color }) =>
-    color === 'primary'
-      ? primaryColorStyles
-      : color === 'secondary'
-      ? secondaryColorStyles
-      : null}
+    color === 'primary' ? primaryColorStyles : secondaryColorStyles}
 
 ${({ variant, color }) =>
   variant === 'outlined'
