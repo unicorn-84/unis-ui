@@ -14,4 +14,5 @@ export const defaultPalette: IPalette = {
   grayColor: 'b7b7b7',
   darkFon: '#0a0a0a',
   lightFon: '#fff',
+  grayFon: '#b7b7b7',
 };

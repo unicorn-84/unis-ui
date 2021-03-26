@@ -46,4 +46,8 @@ export interface IPalette {
    * Color code for lightFon.
    */
   lightFon: string;
+  /**
+   * Color code for grayFon
+   */
+  grayFon: string;
 }
