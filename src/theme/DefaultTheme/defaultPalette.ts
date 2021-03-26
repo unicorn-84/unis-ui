@@ -3,8 +3,8 @@ import { IPalette } from '../types';
  * Default palette.
  */
 export const defaultPalette: IPalette = {
-  brandPrimary: '#3d0240',
-  brandSecondary: '#137083',
+  primaryBrand: '#3d0240',
+  secondaryBrand: '#137083',
   primaryText: '#0a0a0a',
   secondaryText: '#111',
   lightText: '#fff',
