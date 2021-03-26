@@ -2,7 +2,7 @@ import { IPalette } from '../types';
 /**
  * Default palette.
  */
-export const defaultPalette: IPalette = {
+export const defaultPalette: Partial<IPalette> = {
   primaryBrand: '#3d0240',
   secondaryBrand: '#137083',
   primaryText: '#0a0a0a',
