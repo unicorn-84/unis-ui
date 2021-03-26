@@ -7,7 +7,7 @@ const defaultStyles: Partial<ITypeStyle> = {
   fontFamily: defaultFontFamily,
 };
 
-export const defaultTypeScale: Partial<ITypeScale> = {
+export const defaultTypeScale: ITypeScale = {
   title: createFont(defaultStyles, {
     fontSize: '50px',
     fontWeight: 700,
