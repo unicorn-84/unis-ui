@@ -5,7 +5,7 @@ import { Button } from '../src';
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
-  return <Button>Button</Button>;
+  return <Button fullWidth>Button</Button>;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

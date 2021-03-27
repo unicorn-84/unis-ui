@@ -3,42 +3,30 @@ import { hexToChannels } from '../../../utils';
 import { ButtonProps } from '.';
 import { DefaultTheme as theme } from '../../../theme';
 
-hexToChannels(theme.palette?.brand?.primary);
+const BRAND_PRIMARY_COLOR = theme.palette.brand.primary;
+const BRAND_SECONDARY_COLOR = theme.palette.brand.secondary;
+const LIGHT_COLOR = theme.palette.light;
+const GRAY_COLOR = theme.palette.gray;
+const FON_GRAY_COLOR = theme.palette.fon.gray;
 
 const primaryColorStyles = css`
-  background-color: ${theme.palette?.brand?.primary};
-  color: ${theme.palette?.brand?.primary};
-  border-color: ${theme.palette?.brand?.primary};
+  background-color: ${BRAND_PRIMARY_COLOR};
+  color: ${BRAND_PRIMARY_COLOR};
+  border-color: ${BRAND_PRIMARY_COLOR};
 `;
 
 const secondaryColorStyles = css`
-  background-color: ${theme.palette?.brand?.secondary};
-  color: ${theme.palette?.brand?.secondary};
-  border-color: ${theme.palette?.brand?.secondary};
-`;
-
-const baseButtonStyles = css`
-  ${theme.typography?.['button']};
-  padding: 0 ${theme.spacing?.small};
-  border: none;
-  align-items: center;
-  border-radius: ${theme.spacing?.xxsmall};
-  cursor: pointer;
-  vertical-align: middle;
-  display: inline-flex;
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  color: inherit;
-  box-sizing: border-box;
+  background-color: ${BRAND_SECONDARY_COLOR};
+  color: ${BRAND_SECONDARY_COLOR};
+  border-color: ${BRAND_SECONDARY_COLOR};
 `;
 
 const disabledStyles = css`
+  background-color: ${FON_GRAY_COLOR};
+  color: ${FON_GRAY_COLOR};
+  border-color: ${FON_GRAY_COLOR};
   pointer-events: none;
   user-select: none;
-  background-color: ${theme.palette?.fon?.gray};
-  color: ${theme.palette?.light};
-  border-color: ${theme.palette?.fon?.gray};
 `;
 
 const fullWidthStyles = css`
@@ -52,30 +40,62 @@ const outlinedStyles = css`
 `;
 
 const containedStyles = css`
-  color: ${theme.palette?.light};
+  color: ${LIGHT_COLOR};
 `;
 
-const textStyles = (color: ButtonProps['color']) => {
+const textStyles = (
+  color: ButtonProps['color'],
+  disabled: ButtonProps['disabled'],
+) => {
+  let rgb;
   switch (color) {
     case 'primary':
-      return css`
-        color: ${theme.palette?.brand?.primary};
-        background-color: transparent;
+      if ((rgb = hexToChannels(BRAND_PRIMARY_COLOR))) {
+        const color = disabled ? GRAY_COLOR : BRAND_PRIMARY_COLOR;
+        return css`
+          color: ${color};
+          background-color: transparent;
 
-        :hover,
-        :focus {
-          background-color: rgba($);
-        }
-      `;
+          :hover,
+          :focus {
+            background-color: rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.05);
+          }
+        `;
+      }
+      return;
     case 'secondary':
-      return css`
-        color: ${theme.palette?.brand?.secondary};
-        background-color: transparent;
-      `;
+      if ((rgb = hexToChannels(BRAND_SECONDARY_COLOR))) {
+        const color = disabled ? GRAY_COLOR : BRAND_SECONDARY_COLOR;
+        return css`
+          color: ${color};
+          background-color: transparent;
+
+          :hover,
+          :focus {
+            background-color: rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.05);
+          }
+        `;
+      }
+      return;
     default:
       return;
   }
 };
+
+const baseButtonStyles = css`
+  box-sizing: border-box;
+
+  ${theme.typography?.['button']};
+
+  padding: 0 ${theme.spacing?.small};
+  border: none;
+  border-radius: ${theme.spacing?.xxsmall};
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 const StyledButton = styled.button<ButtonProps>`
   ${baseButtonStyles};
@@ -83,14 +103,14 @@ const StyledButton = styled.button<ButtonProps>`
   ${({ color }) =>
     color === 'primary' ? primaryColorStyles : secondaryColorStyles}
 
-${({ variant, color }) =>
-  variant === 'outlined'
-    ? outlinedStyles
-    : variant === 'contained'
-    ? containedStyles
-    : textStyles(color)}
-
   ${({ disabled }) => disabled && disabledStyles}
+
+  ${({ variant, color, disabled }) =>
+    variant === 'outlined'
+      ? outlinedStyles
+      : variant === 'contained'
+      ? containedStyles
+      : textStyles(color, disabled)}
 
   ${({ fullWidth }) => fullWidth && fullWidthStyles}
 `;
