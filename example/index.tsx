@@ -7,17 +7,19 @@ interface AppProps {}
 const App: React.FC<AppProps> = () => {
   return (
     <Box>
-      <Box>
+      <Box
+        margin={{
+          top: 'none',
+          x: 'small',
+          y: 'small',
+        }}
+      >
         <Button>Button 1</Button>
         <Button>Button 2</Button>
         <Button>Button 3</Button>
         <Button>Button 4</Button>
       </Box>
-      <Box
-        margin={{
-          top: 'large',
-        }}
-      >
+      <Box>
         <Button>Button 1</Button>
         <Button>Button 2</Button>
         <Button>Button 3</Button>

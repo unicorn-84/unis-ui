@@ -8,4 +8,5 @@ export interface ISpacing {
   medium: string;
   large: string;
   xlarge: string;
+  none?: null;
 }
