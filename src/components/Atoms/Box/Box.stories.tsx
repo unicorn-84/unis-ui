@@ -22,9 +22,6 @@ export default {
         type: {
           summary: 'string | object',
         },
-        defaultValue: {
-          summary: 'none',
-        },
       },
       control: 'disable',
     },
