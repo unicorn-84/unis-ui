@@ -8,8 +8,9 @@ describe('Box', () => {
     expect(screen.getByText(/box/i)).toBeInTheDocument();
   });
 
-  it('renders Box with `alignSelf` correctly', () => {
-    render(<Box alignSelf="stretch">Box</Box>);
-    expect(screen.getByText(/box/i)).toBeInTheDocument();
+  it('renders Box with `margin` correctly', () => {
+    render(<Box margin="small">Box</Box>);
+    render(<Box margin={{ top: 'xxsmall' }}>Box</Box>);
+    expect(screen.getAllByText(/box/i).length).toEqual(2);
   });
 });
