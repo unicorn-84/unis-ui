@@ -1,6 +1,7 @@
 import { ISpacing } from '../types/index';
 
 export const defaultSpacing: ISpacing = {
+  none: '0px',
   xxsmall: '6px',
   xsmall: '12px',
   small: '26px',

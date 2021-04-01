@@ -2,6 +2,7 @@
  * Spacing.
  */
 export interface ISpacing {
+  none: string;
   xxsmall: string;
   xsmall: string;
   small: string;
