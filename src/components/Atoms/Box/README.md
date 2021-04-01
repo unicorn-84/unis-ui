@@ -17,25 +17,25 @@ The amount of margin around the component. An object can be specified to disting
 
 *Type:*
 ```
-  xxsmall | xsmall | small | medium | large | xlarge
+  xxsmall | xsmall | small | medium | large | xlarge | none
   | {
       x:
-        xxsmall | xsmall | small | medium | large | xlarge,
+        xxsmall | xsmall | small | medium | large | xlarge | none,
       y:
-        xxsmall | xsmall | small | medium | large | xlarge,
+        xxsmall | xsmall | small | medium | large | xlarge | none,
       top:
-        xxsmall | xsmall | small | medium | large | xlarge,
+        xxsmall | xsmall | small | medium | large | xlarge | none,
       right:
-        xxsmall | xsmall | small | medium | large | xlarge,
+        xxsmall | xsmall | small | medium | large | xlarge | none,
       bottom:
-        xxsmall | xsmall | small | medium | large | xlarge,
+        xxsmall | xsmall | small | medium | large | xlarge | none,
       left:
-        xxsmall | xsmall | small | medium | large | xlarge,
+        xxsmall | xsmall | small | medium | large | xlarge | none,
     }
 ```
 *Required:* false
 
-*Default:*
+*Default:* none
 
 ## Intrinsic element
 
