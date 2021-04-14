@@ -1,31 +1,34 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Box, Button } from '../src';
+import { Container, Box, Link } from '../src';
 
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
   return (
-    <Box>
-      <Box
-        margin={{
-          top: 'none',
-          x: 'small',
-          y: 'small',
-        }}
-      >
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
-      </Box>
-      <Box>
-        <Button>Button 1</Button>
-        <Button>Button 2</Button>
-        <Button>Button 3</Button>
-        <Button>Button 4</Button>
-      </Box>
-    </Box>
+    <header style={{ backgroundColor: '#eee' }}>
+      <Container maxWidth="xl" disableGutters>
+        <Box
+          padding="xsmall"
+          style={{ backgroundColor: '#ddd' }}
+          justify="space-between"
+          wrap="wrap"
+        >
+          <Box style={{ backgroundColor: 'violet' }} grow={1}>
+            Icon
+          </Box>
+          <Box style={{ backgroundColor: 'pink' }} gap="small" align="center">
+            <Link>Home</Link>
+            <Link>Projects</Link>
+            <Link>About</Link>
+            <Link>Contacts</Link>
+          </Box>
+          <Box style={{ backgroundColor: 'cyan' }} padding="small">
+            More menu
+          </Box>
+        </Box>
+      </Container>
+    </header>
   );
 };
 
