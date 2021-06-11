@@ -59,4 +59,9 @@ describe('Box', () => {
     render(<Box as="ul">Box</Box>);
     expect(screen.getByText(/box/i)).toBeInTheDocument();
   });
+
+  it('renders Box with `inline` correctly', () => {
+    render(<Box inline>Box</Box>);
+    expect(screen.getByText(/box/i)).toBeInTheDocument();
+  });
 });

@@ -1,11 +1,19 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Pagination } from '../src';
+import { Box } from '../src';
 
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
-  return <Pagination direction="column" gap="xsmall" color="dark" count={5} />;
+  return (
+    <Box as="ul" justify="space-around" align="center" inline>
+      <li>1</li>
+      <li>2</li>
+      <li>
+        <div style={{ height: 150, width: 150, backgroundColor: 'pink' }}></div>
+      </li>
+    </Box>
+  );
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

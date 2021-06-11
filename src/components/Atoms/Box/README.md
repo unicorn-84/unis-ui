@@ -133,6 +133,16 @@ The amount of padding around the box contents. An object can be specified to dis
 
 *Default:* none
 
+### as
+
+The DOM tag or react component to use for the element.
+
+*Type:* string | function
+
+*Required:* false
+
+*Default:* "div"
+
 ## Intrinsic element
 
 ```
