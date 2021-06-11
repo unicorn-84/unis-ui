@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-// import { DefaultTheme as theme } from '../../../theme';
-import { Box } from '../../Atoms';
 import { PaginationProps } from './Pagination.component';
 
-const StyledPagination = styled(Box)<PaginationProps>``;
+const StyledPagination = styled.nav<PaginationProps>``;
 
 export default StyledPagination;
