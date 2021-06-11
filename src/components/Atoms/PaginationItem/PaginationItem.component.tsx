@@ -22,7 +22,7 @@ export interface PaginationItemProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const PaginationItem: FC<PaginationItemProps> = ({
-  color = 'light',
+  color = 'dark',
   selected = false,
   size = 'small',
   shape = 'circular',
