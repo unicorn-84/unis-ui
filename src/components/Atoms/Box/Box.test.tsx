@@ -54,4 +54,9 @@ describe('Box', () => {
     render(<Box gap="small">Box</Box>);
     expect(screen.getByText(/box/i)).toBeInTheDocument();
   });
+
+  it('renders Box with `as` correctly', () => {
+    render(<Box as="ul">Box</Box>);
+    expect(screen.getByText(/box/i)).toBeInTheDocument();
+  });
 });

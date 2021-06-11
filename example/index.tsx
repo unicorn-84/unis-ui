@@ -5,15 +5,7 @@ import { Pagination } from '../src';
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
-  return (
-    <Pagination
-      direction="column"
-      gap="xsmall"
-      color="dark"
-      count={5}
-      active={1}
-    />
-  );
+  return <Pagination direction="column" gap="xsmall" color="dark" count={5} />;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
