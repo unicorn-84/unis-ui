@@ -49,8 +49,7 @@ export default {
           summary: 'xxsmall | xsmall | small | medium | large | xlarge',
         },
         defaultValue: {
-          //FIXME: small
-          summary: 'medium',
+          summary: 'small',
         },
       },
       control: {
