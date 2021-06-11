@@ -7,6 +7,7 @@ const basePaginationItemStyle = css`
   cursor: pointer;
   border-style: solid;
   border-color: currentColor;
+  transition: background-color 0.3s ease-in-out;
 `;
 
 const shapeStyle = (shape: PaginationItemProps['shape']) => {
