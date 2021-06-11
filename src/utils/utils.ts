@@ -1,6 +1,6 @@
 /**
  * Convert hex color to decimal values of channels.
- * @param string A string of hex value color.
+ * @param hexColor A string of hex value color.
  */
 
 export const hexToChannels: (
@@ -27,3 +27,11 @@ export const hexToChannels: (
   }
   return null;
 };
+
+/**
+ * Create an array of numbers in the given range.
+ * @param min A min value.
+ * @param max A max value.
+ */
+export const range: (min: number, max: number) => number[] = (min, max) =>
+  Array.from({ length: max - min + 1 }, (_, i) => i + min);
