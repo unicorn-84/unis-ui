@@ -150,6 +150,20 @@ export default {
         options: ['wrap', 'nowrap', 'wrap-reverse'],
       },
     },
+    inline: {
+      description: 'If "true" the display property is "inline-flex".',
+      table: {
+        type: {
+          summary: 'true | false',
+        },
+        defaultValue: {
+          summary: 'false',
+        },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 } as Meta;
 
@@ -386,4 +400,24 @@ export const Wrap: Story<BoxProps> = args => (
 
 Wrap.args = {
   wrap: 'wrap',
+};
+
+export const Inline: Story<BoxProps> = args => (
+  <Box
+    padding="xsmall"
+    gap="small"
+    {...args}
+    style={{
+      border: '1px solid #888',
+    }}
+  >
+    <Link>Home</Link>
+    <Link>Projects</Link>
+    <Link>About</Link>
+    <Link>Contacts</Link>
+  </Box>
+);
+
+Inline.args = {
+  inline: true,
 };

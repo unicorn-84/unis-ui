@@ -4,6 +4,7 @@ import { PaginationItemProps } from './PaginationItem.component';
 
 const basePaginationItemStyle = css`
   box-sizing: border-box;
+  display: inline-block;
   cursor: pointer;
   border-style: solid;
   border-color: currentColor;

@@ -6,6 +6,10 @@ type Side = 'x' | 'y' | 'top' | 'right' | 'bottom' | 'left';
 
 export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   /**
+   * If 'true' the display property is 'inline-flex'.
+   */
+  inline?: boolean;
+  /**
    * The CSS flex-direction property.
    */
   direction?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
@@ -25,11 +29,11 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
     | 'space-between'
     | 'space-evenly';
   /**
-   * The flex-shrink CSS prpperty.
+   * The flex-shrink CSS property.
    */
   shrink?: number;
   /**
-   * The flex-grow CSS prpperty.
+   * The flex-grow CSS property.
    */
   grow?: number;
   /**
@@ -66,6 +70,7 @@ const Box: FC<BoxProps> = ({
   padding = 'none',
   gap,
   as,
+  inline = false,
   ...props
 }) => (
   <StyledBox
@@ -79,6 +84,7 @@ const Box: FC<BoxProps> = ({
     wrap={wrap}
     gap={gap}
     as={as}
+    inline={inline}
     {...props}
   >
     {children}
