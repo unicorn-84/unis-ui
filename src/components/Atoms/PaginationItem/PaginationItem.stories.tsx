@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import PaginationItemComponent, { PaginationItemProps } from '.';
 
 export default {
-  title: 'Design System/Atoms/PaginationItem',
+  title: 'Design System/Atoms/Pagination Item',
   parameters: {
     docs: {
       description: {
@@ -20,7 +20,7 @@ export default {
           summary: 'light | dark',
         },
         defaultValue: {
-          summary: 'light',
+          summary: 'dark',
         },
       },
       control: {
@@ -75,19 +75,6 @@ export default {
   },
 } as Meta;
 
-const Template: Story<PaginationItemProps> = args => (
-  <div
-    style={{
-      display: 'grid',
-      placeItems: 'center',
-      height: 250,
-      backgroundColor: 'lightgreen',
-    }}
-  >
-    <PaginationItemComponent {...args} />
-  </div>
+export const PaginationItem: Story<PaginationItemProps> = args => (
+  <PaginationItemComponent {...args} />
 );
-
-export const PaginationItem = Template.bind({});
-
-PaginationItem.args = {};
