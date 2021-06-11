@@ -48,6 +48,10 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
    * The amount of padding around the box contents/
    */
   padding?: keyof ISpacing | Partial<Record<Side, keyof ISpacing>>;
+  /**
+   * A component type or primitive that is rendered as the type of the root element.
+   */
+  as?: React.ElementType;
 }
 
 const Box: FC<BoxProps> = ({
@@ -61,6 +65,7 @@ const Box: FC<BoxProps> = ({
   margin = 'none',
   padding = 'none',
   gap,
+  as,
   ...props
 }) => (
   <StyledBox
@@ -73,6 +78,7 @@ const Box: FC<BoxProps> = ({
     shrink={shrink}
     wrap={wrap}
     gap={gap}
+    as={as}
     {...props}
   >
     {children}
