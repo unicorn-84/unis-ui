@@ -127,7 +127,8 @@ const getGapStyles = ({ gap, direction, wrap }: BoxProps) => {
 };
 
 const StyledBox = styled.div<BoxProps>`
-  display: flex;
+  list-style: none;
+  display: ${({ inline }) => (inline ? 'inline-flex' : 'flex')};
   ${props => props.direction && getDirectionStyles}
   ${props => props.align && getAlignStyles}
   ${props => props.justify && getJustifyStyles}
@@ -136,7 +137,7 @@ const StyledBox = styled.div<BoxProps>`
   ${props => props.grow && getGrowStyles}
   ${props => props.shrink && getShrinkStyles}
   ${props => props.wrap && getWrapStyles}
-  ${props => props.gap && getGapStyles}
+  ${props => props.gap && getGapStyles};
 `;
 
 StyledBox.defaultProps = {
