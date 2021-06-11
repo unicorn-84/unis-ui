@@ -33,7 +33,7 @@ export interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
 const Pagination: React.FC<PaginationProps> = ({
   direction = 'row',
   gap,
-  color = 'light',
+  color = 'dark',
   shape = 'circular',
   size = 'small',
   count,
