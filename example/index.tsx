@@ -1,11 +1,19 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { PaginationItem } from '../src';
+import { Pagination } from '../src';
 
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
-  return <PaginationItem color="dark" size="large" />;
+  return (
+    <Pagination
+      direction="column"
+      gap="xsmall"
+      color="dark"
+      count={5}
+      active={1}
+    />
+  );
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
