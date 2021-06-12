@@ -126,7 +126,7 @@ const getGapStyles = ({ gap, direction, wrap }: BoxProps) => {
   return;
 };
 
-const StyledBox = styled.div<BoxProps>`
+const BoxContainer = styled.div<BoxProps>`
   list-style: none;
   display: ${({ inline }) => (inline ? 'inline-flex' : 'flex')};
   ${props => props.direction && getDirectionStyles}
@@ -140,8 +140,8 @@ const StyledBox = styled.div<BoxProps>`
   ${props => props.gap && getGapStyles};
 `;
 
-StyledBox.defaultProps = {
+BoxContainer.defaultProps = {
   theme,
 };
 
-export default StyledBox;
+export default BoxContainer;
