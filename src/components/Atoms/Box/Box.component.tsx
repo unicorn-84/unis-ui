@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes } from 'react';
 import { ISpacing } from '../../../theme/types';
-import StyledBox from './Box.styles';
+import BoxContainer from './Box.styles';
 
 type Side = 'x' | 'y' | 'top' | 'right' | 'bottom' | 'left';
 
@@ -73,7 +73,7 @@ const Box: FC<BoxProps> = ({
   inline = false,
   ...props
 }) => (
-  <StyledBox
+  <BoxContainer
     direction={direction}
     margin={margin}
     padding={padding}
@@ -88,7 +88,7 @@ const Box: FC<BoxProps> = ({
     {...props}
   >
     {children}
-  </StyledBox>
+  </BoxContainer>
 );
 
 export default Box;

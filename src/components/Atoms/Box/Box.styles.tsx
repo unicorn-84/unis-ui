@@ -2,31 +2,7 @@ import styled, { css } from 'styled-components';
 import { BoxProps } from './Box.component';
 import { DefaultTheme as theme } from '../../../theme';
 
-const getDirectionStyles = ({ direction }: BoxProps) => css`
-  flex-direction: ${direction};
-`;
-
-const getAlignStyles = ({ align }: BoxProps) => css`
-  align-items: ${align};
-`;
-
-const getGrowStyles = ({ grow }: BoxProps) => css`
-  flex-grow: ${grow};
-`;
-
-const getWrapStyles = ({ wrap }: BoxProps) => css`
-  flex-wrap: ${wrap};
-`;
-
-const getShrinkStyles = ({ shrink }: BoxProps) => css`
-  flex-shrink: ${shrink};
-`;
-
-const getJustifyStyles = ({ justify }: BoxProps) => css`
-  justify-content: ${justify};
-`;
-
-const getMarginStyles = ({ margin }: BoxProps) => {
+const getMarginStyle = ({ margin }: BoxProps) => {
   if (margin) {
     if (typeof margin === 'string') {
       return css`
@@ -67,7 +43,7 @@ const getMarginStyles = ({ margin }: BoxProps) => {
   return;
 };
 
-const getPaddingStyles = ({ padding }: BoxProps) => {
+const getPaddingStyle = ({ padding }: BoxProps) => {
   if (padding) {
     if (typeof padding === 'string') {
       return css`
@@ -108,8 +84,8 @@ const getPaddingStyles = ({ padding }: BoxProps) => {
   return;
 };
 
-const getGapStyles = ({ gap, direction, wrap }: BoxProps) => {
-  if (!wrap && gap) {
+const getGapStyle = ({ gap, direction, wrap }: BoxProps) => {
+  if (wrap === 'nowrap' && gap) {
     if (direction === 'column' || direction === 'column-reverse') {
       return css`
         & > *:not(:last-child) {
@@ -126,22 +102,30 @@ const getGapStyles = ({ gap, direction, wrap }: BoxProps) => {
   return;
 };
 
-const StyledBox = styled.div<BoxProps>`
-  list-style: none;
+const BoxContainer = styled.div<BoxProps>`
   display: ${({ inline }) => (inline ? 'inline-flex' : 'flex')};
-  ${props => props.direction && getDirectionStyles}
-  ${props => props.align && getAlignStyles}
-  ${props => props.justify && getJustifyStyles}
-  ${props => props.margin && getMarginStyles}
-  ${props => props.padding && getPaddingStyles}
-  ${props => props.grow && getGrowStyles}
-  ${props => props.shrink && getShrinkStyles}
-  ${props => props.wrap && getWrapStyles}
-  ${props => props.gap && getGapStyles};
+
+  flex-direction: ${({ direction }) => direction};
+
+  align-items: ${({ align }) => align};
+
+  justify-content: ${({ justify }) => justify};
+
+  flex-wrap: ${({ wrap }) => wrap};
+
+  flex-shrink: ${({ shrink }) => shrink};
+
+  flex-grow: ${({ grow }) => grow};
+
+  ${({ gap }) => gap && getGapStyle};
+
+  ${({ margin }) => margin && getMarginStyle};
+
+  ${({ padding }) => padding && getPaddingStyle};
 `;
 
-StyledBox.defaultProps = {
+BoxContainer.defaultProps = {
   theme,
 };
 
-export default StyledBox;
+export default BoxContainer;
