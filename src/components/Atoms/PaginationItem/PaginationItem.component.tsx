@@ -19,6 +19,7 @@ export interface PaginationItemProps
   /**
    * If `true` the component is selected.
    */
+  //TODO: selected
   active?: boolean;
 }
 
