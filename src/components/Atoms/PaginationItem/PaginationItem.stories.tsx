@@ -14,7 +14,7 @@ export default {
   args: {},
   argTypes: {
     color: {
-      description: 'Fill color or border color.',
+      description: 'Fill color and border color.',
       table: {
         type: {
           summary: 'light | dark',
@@ -28,8 +28,8 @@ export default {
         options: ['light', 'dark'],
       },
     },
-    selected: {
-      description: 'If "true" the pagination item is selected.',
+    active: {
+      description: 'If "true" the component is selected.',
       table: {
         type: {
           summary: 'true | false',
@@ -58,7 +58,7 @@ export default {
       },
     },
     shape: {
-      description: 'The shape of the pagination item.',
+      description: 'The shape of the component.',
       table: {
         type: {
           summary: 'circular | rounded | quadratic',

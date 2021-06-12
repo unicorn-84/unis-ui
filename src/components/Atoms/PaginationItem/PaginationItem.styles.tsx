@@ -4,7 +4,6 @@ import { PaginationItemProps } from './PaginationItem.component';
 
 const basePaginationItemStyle = css`
   box-sizing: border-box;
-  display: inline-block;
   cursor: pointer;
   border-style: solid;
   border-color: currentColor;
@@ -26,9 +25,9 @@ const shapeStyle = (shape: PaginationItemProps['shape']) => {
   }
 };
 
-const StyledPaginationItem = styled.div<PaginationItemProps>`
-  color: ${({ color }) => theme.palette[color || 'light']};
-  background-color: ${({ selected }) => selected && 'currentColor'};
+const PaginationItemContainer = styled.div<PaginationItemProps>`
+  color: ${({ color }) => color && theme.palette[color]};
+  background-color: ${({ active }) => active && 'currentColor'};
 
   ${({ size }) =>
     size &&
@@ -43,8 +42,8 @@ const StyledPaginationItem = styled.div<PaginationItemProps>`
   ${basePaginationItemStyle}
 `;
 
-StyledPaginationItem.defaultProps = {
+PaginationItemContainer.defaultProps = {
   theme,
 };
 
-export default StyledPaginationItem;
+export default PaginationItemContainer;
