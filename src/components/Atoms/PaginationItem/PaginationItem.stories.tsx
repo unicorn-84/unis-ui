@@ -28,7 +28,7 @@ export default {
         options: ['light', 'dark'],
       },
     },
-    active: {
+    selected: {
       description: 'If "true" the component is selected.',
       table: {
         type: {

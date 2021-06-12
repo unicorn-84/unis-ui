@@ -10,7 +10,7 @@ describe('PaginationItem', () => {
         color="light"
         size="small"
         shape="rounded"
-        active
+        selected
       />,
     );
     expect(screen.getByTestId('root')).toBeInTheDocument();

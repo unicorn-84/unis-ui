@@ -21,7 +21,7 @@ Fill color and border color.
 
 *Default:* "dark"
 
-### active
+### selected
 
 If "true" the component is selected.
 
