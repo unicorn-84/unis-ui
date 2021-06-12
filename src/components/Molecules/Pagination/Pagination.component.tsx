@@ -1,35 +1,76 @@
 import * as React from 'react';
-import { PaginationItem } from '../../Atoms';
+import { range } from '../../../utils';
 import Box, { BoxProps } from '../../Atoms/Box';
-import { PaginationItemProps } from '../../Atoms/PaginationItem';
-import StyledPagination from './Pagination.style';
+import PaginationItem, {
+  PaginationItemProps,
+} from '../../Atoms/PaginationItem';
+import { PaginationContainer } from './Pagination.style';
 
 export interface PaginationProps
-  extends Omit<BoxProps, 'color'>,
-    PaginationItemProps {
+  extends Omit<React.HTMLAttributes<HTMLElement>, 'color'>,
+    Pick<
+      BoxProps,
+      'direction' | 'align' | 'justify' | 'wrap' | 'gap' | 'margin' | 'padding'
+    >,
+    Pick<PaginationItemProps, 'color' | 'size' | 'shape'> {
   /**
-   * A count of the pagination items.
+   * A number of the pagination items.
    */
-  count: number;
+  items: number;
+  /**
+   * The active pagination item;
+   */
+  active?: number;
+  /**
+   * A component type or primitive that is rendered as the type of the root element.
+   */
+  as?: React.ElementType;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ count, ...props }) => {
-  const [selectedItem, setSelectedItem] = React.useState(0);
+const Pagination: React.FC<PaginationProps> = ({
+  items,
+  active = 1,
+  as,
+  direction,
+  align,
+  justify,
+  wrap,
+  gap,
+  margin,
+  padding,
+  color,
+  size,
+  shape,
+  ...props
+}) => {
+  if (items <= 0) return null;
+  if (active > items || active <= 0) {
+    active = 1;
+  }
   return (
-    <StyledPagination count={count}>
-      <Box as="ul" {...props}>
-        {Array.from({ length: count }).map((_, i) => (
-          <li>
+    <PaginationContainer items={items} active={active} as={as} {...props}>
+      <Box
+        as="ul"
+        direction={direction}
+        align={align}
+        justify={justify}
+        wrap={wrap}
+        gap={gap}
+        margin={margin}
+        padding={padding}
+      >
+        {range(1, items).map(item => (
+          <li key={item}>
             <PaginationItem
-              key={i}
-              onClick={() => setSelectedItem(i)}
-              selected={i === selectedItem}
-              {...props}
+              active={item === active}
+              color={color}
+              size={size}
+              shape={shape}
             />
           </li>
         ))}
       </Box>
-    </StyledPagination>
+    </PaginationContainer>
   );
 };
 
