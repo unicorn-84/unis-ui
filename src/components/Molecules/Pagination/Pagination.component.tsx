@@ -62,7 +62,7 @@ const Pagination: React.FC<PaginationProps> = ({
         {range(1, items).map(item => (
           <li key={item}>
             <PaginationItem
-              active={item === active}
+              selected={item === active}
               color={color}
               size={size}
               shape={shape}

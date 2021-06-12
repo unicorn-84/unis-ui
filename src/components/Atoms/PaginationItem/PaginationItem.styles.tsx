@@ -27,7 +27,7 @@ const shapeStyle = (shape: PaginationItemProps['shape']) => {
 
 const PaginationItemContainer = styled.div<PaginationItemProps>`
   color: ${({ color }) => color && theme.palette[color]};
-  background-color: ${({ active }) => active && 'currentColor'};
+  background-color: ${({ selected }) => selected && 'currentColor'};
 
   ${({ size }) =>
     size &&

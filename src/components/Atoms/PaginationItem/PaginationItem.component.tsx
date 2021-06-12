@@ -19,23 +19,22 @@ export interface PaginationItemProps
   /**
    * If `true` the component is selected.
    */
-  //TODO: selected
-  active?: boolean;
+  selected?: boolean;
 }
 
 const PaginationItem: FC<PaginationItemProps> = ({
   color = 'dark',
   size = 'small',
   shape = 'circular',
-  active = false,
+  selected = false,
   ...props
 }) => (
   <PaginationItemContainer
     color={color}
     size={size}
     shape={shape}
-    active={active}
-    tabIndex={active ? -1 : 0}
+    selected={selected}
+    tabIndex={selected ? -1 : 0}
     {...props}
   />
 );
