@@ -1,42 +1,41 @@
-import React, { HTMLAttributes, FC } from 'react';
+import React, { FC, HTMLAttributes } from 'react';
 import { ISpacing } from '../../../theme/types';
-import StyledPaginationItem from './PaginationItem.styles';
+import PaginationItemContainer from './PaginationItem.styles';
 
-export interface PaginationItemProps extends HTMLAttributes<HTMLDivElement> {
+export interface PaginationItemProps
+  extends Omit<HTMLAttributes<HTMLDivElement>, 'color'> {
   /**
-   * The active color.
+   * Fill color and border color.
    */
   color?: 'light' | 'dark';
   /**
-   * If `true` the pagination item is selected.
-   */
-  selected?: boolean;
-  /**
-   * The size of the component.
+   * The size of the component;
    */
   size?: keyof ISpacing;
   /**
-   * The shape of the pagination item.
+   * The shape of the components.
    */
   shape?: 'circular' | 'rounded' | 'quadratic';
+  /**
+   * If `true` the component is selected.
+   */
+  active?: boolean;
 }
 
 const PaginationItem: FC<PaginationItemProps> = ({
   color = 'dark',
-  selected = false,
   size = 'small',
   shape = 'circular',
+  active = false,
   ...props
 }) => (
-  <StyledPaginationItem
+  <PaginationItemContainer
     color={color}
-    selected={selected}
-    tabIndex={0}
     size={size}
     shape={shape}
+    active={active}
+    tabIndex={active ? -1 : 0}
     {...props}
-    //FIXME:
-    data-testid="pagination-item"
   />
 );
 

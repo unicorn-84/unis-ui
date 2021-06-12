@@ -13,7 +13,7 @@ import { PaginationItem } from '@web-uni/unis';
 
 ### color
 
-Fill color or border color.
+Fill color and border color.
 
 *Type:* "light" | "dark"
 
@@ -21,9 +21,9 @@ Fill color or border color.
 
 *Default:* "dark"
 
-### selected
+### active
 
-If "true" the pagination item is selected.
+If "true" the component is selected.
 
 *Type:* true | false
 
