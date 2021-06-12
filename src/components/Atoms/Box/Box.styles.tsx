@@ -85,6 +85,7 @@ const getPaddingStyle = ({ padding }: BoxProps) => {
 };
 
 const getGapStyle = ({ gap, direction, wrap }: BoxProps) => {
+  //TODO: (!wrap || wrap === 'nowrap') && gap
   if (wrap === 'nowrap' && gap) {
     if (direction === 'column' || direction === 'column-reverse') {
       return css`
