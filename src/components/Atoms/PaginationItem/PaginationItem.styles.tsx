@@ -18,6 +18,7 @@ const shapeStyle = (shape: PaginationItemProps['shape']) => {
       `;
     case 'rounded':
       return css`
+        /* TODO: xsmall */
         border-radius: 25%;
       `;
     default:

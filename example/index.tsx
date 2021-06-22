@@ -1,18 +1,20 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Pagination } from '../src';
+import { Bar } from '../src';
 
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
   return (
-    <Pagination
-      items={5}
-      padding="small"
-      className="class"
-      gap="xsmall"
-      justify="center"
-    />
+    <>
+      <Bar as="header" maxWidth="lg" padding={{ y: 'small' }}>
+        Header
+      </Bar>
+      <Bar as="footer" maxWidth="lg">
+        Footer
+      </Bar>
+      ;
+    </>
   );
 };
 
