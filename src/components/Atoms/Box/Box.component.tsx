@@ -5,6 +5,7 @@ import BoxContainer from './Box.styles';
 type Side = 'x' | 'y' | 'top' | 'right' | 'bottom' | 'left';
 
 export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
+  // TODO: display
   /**
    * If 'true' the display property is 'inline-flex'.
    */
