@@ -149,18 +149,19 @@ export default {
         options: ['wrap', 'nowrap', 'wrap-reverse'],
       },
     },
-    inline: {
-      description: 'If "true" the display property is "inline-flex".',
+    display: {
+      description: 'The CSS display property.',
       table: {
         type: {
-          summary: 'true | false',
+          summary: 'block | inline-block | flex | inline-flex',
         },
         defaultValue: {
-          summary: 'false',
+          summary: 'flex',
         },
       },
       control: {
-        type: 'boolean',
+        type: 'select',
+        options: ['block', 'inline-block', 'flex', 'inline-flex'],
       },
     },
   },

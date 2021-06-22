@@ -141,7 +141,17 @@ The DOM tag or react component to use for the element.
 
 *Required:* false
 
-*Default:* "div"
+*Default:* div
+
+### display
+
+The CSS display property.
+
+*Type:* block | inline-block | flex | inline-flex
+
+*Required:* false
+
+*Default:* flex
 
 ## Intrinsic element
 
