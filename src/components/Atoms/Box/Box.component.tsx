@@ -5,11 +5,10 @@ import BoxContainer from './Box.styles';
 type Side = 'x' | 'y' | 'top' | 'right' | 'bottom' | 'left';
 
 export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
-  // TODO: display
   /**
-   * If 'true' the display property is 'inline-flex'.
+   * The CSS display property.
    */
-  inline?: boolean;
+  display?: 'block' | 'inline-block' | 'flex' | 'inline-flex';
   /**
    * The CSS flex-direction property.
    */
@@ -71,7 +70,7 @@ const Box: FC<BoxProps> = ({
   padding = 'none',
   gap,
   as,
-  inline = false,
+  display = 'flex',
   ...props
 }) => (
   <BoxContainer
@@ -85,7 +84,7 @@ const Box: FC<BoxProps> = ({
     wrap={wrap}
     gap={gap}
     as={as}
-    inline={inline}
+    display={display}
     {...props}
   >
     {children}

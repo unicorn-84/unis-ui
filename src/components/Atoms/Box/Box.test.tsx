@@ -6,7 +6,7 @@ describe('<Box />', () => {
   it('should render correctly', () => {
     render(
       <Box
-        inline
+        display="block"
         as="div"
         gap="small"
         wrap="wrap"

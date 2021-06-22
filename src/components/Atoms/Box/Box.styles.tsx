@@ -103,7 +103,7 @@ const getGapStyle = ({ gap, direction, wrap }: BoxProps) => {
 };
 
 const BoxContainer = styled.div<BoxProps>`
-  display: ${({ inline }) => (inline ? 'inline-flex' : 'flex')};
+  display: ${({ display }) => display};
 
   flex-direction: ${({ direction }) => direction};
 
