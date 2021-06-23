@@ -27,6 +27,44 @@ export default {
         options: ['body'],
       },
     },
+    color: {
+      description: 'The color of the component.',
+      table: {
+        type: {
+          summary:
+            'brandPrimary | brandSecondary | textPrimary | textSecondary | textDark | textLight | textGray',
+        },
+        defaultValue: {
+          summary: 'textSecondary',
+        },
+      },
+      control: {
+        type: 'select',
+        options: [
+          'brandPrimary',
+          'brandSecondary',
+          'textPrimary',
+          'textSecondary',
+          'textDark',
+          'textLight',
+          'textGray',
+        ],
+      },
+    },
+    disableMargins: {
+      description: "If 'true', the margins is removed.",
+      table: {
+        type: {
+          summary: 'true | false',
+        },
+        defaultValue: {
+          summary: false,
+        },
+      },
+      control: {
+        type: 'boolean',
+      },
+    },
   },
 } as Meta;
 
