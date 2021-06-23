@@ -37,7 +37,7 @@ const Text: FC<TextProps> = ({
   children,
   variant = 'text',
   as = 'span',
-  color = 'textSecondary',
+  color,
   marked,
   ...props
 }) => (
