@@ -1,7 +1,10 @@
 import React, { AnchorHTMLAttributes, MouseEvent } from 'react';
-import StyledLink from './Link.styles';
+import { TextProps } from '../../Typography/Text';
+import StyledLink from './Link.style';
 
-export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface LinkProps
+  extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'color'>,
+    Pick<TextProps, 'color' | 'marked' | 'variant'> {
   /**
    * Whether the anchor is disabled.
    */
@@ -16,6 +19,9 @@ const Link = ({
   children,
   disabled = false,
   underline,
+  color = 'brandSecondary',
+  marked,
+  variant = 'strong',
   ...props
 }: LinkProps) => {
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
@@ -30,6 +36,9 @@ const Link = ({
       {...props}
       disabled={disabled}
       underline={underline}
+      color={color}
+      marked={marked}
+      variant={variant}
     >
       {children}
     </StyledLink>
