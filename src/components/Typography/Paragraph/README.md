@@ -21,6 +21,26 @@ A paragraph can define its look via defined variants.
 
 *Default:* "body"
 
+### color
+
+The color of the component.
+
+*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textDark" | "textLight" | "textGray",
+
+*Required:* false
+
+*Default:* "textSecondary"
+
+### disableMargins
+
+If 'true', the margins is removed.
+
+*Type:* "true" | "false"
+
+*Required:* false
+
+*Default:* false
+
 ## Intrinsic element
 
 ```
