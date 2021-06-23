@@ -1,7 +1,12 @@
 import React, { FC, HTMLAttributes } from 'react';
-import StyledHeading from './Heading.styles';
+import { ParagraphProps } from '../Paragraph';
+import { TextProps } from '../Text';
+import StyledHeading from './Heading.style';
 
-export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
+export interface HeadingProps
+  extends Omit<HTMLAttributes<HTMLHeadingElement>, 'color'>,
+    Pick<TextProps, 'marked' | 'color'>,
+    Pick<ParagraphProps, 'disableMargins'> {
   /**
    * Applies the theme typography styles.
    */
@@ -16,9 +21,20 @@ const Heading: FC<HeadingProps> = ({
   level = 'h1',
   children,
   variant = 'title',
+  marked,
+  color = 'textPrimary',
+  disableMargins = false,
   ...props
 }) => (
-  <StyledHeading as={level} level={level} variant={variant} {...props}>
+  <StyledHeading
+    as={level}
+    level={level}
+    variant={variant}
+    marked={marked}
+    disableMargins={disableMargins}
+    color={color}
+    {...props}
+  >
     {children}
   </StyledHeading>
 );
