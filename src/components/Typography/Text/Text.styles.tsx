@@ -4,7 +4,8 @@ import { TextProps } from './Text.component';
 
 const StyledText = styled.span<TextProps>`
   ${({ variant }) => theme.typography?.[variant || 'text']};
-  color: ${theme.palette?.text?.secondary};
+  /* FIXME: */
+  /* color: ${theme.palette?.text?.secondary}; */
 `;
 
 StyledText.defaultProps = {
