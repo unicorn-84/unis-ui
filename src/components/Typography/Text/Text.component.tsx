@@ -1,24 +1,53 @@
 import React, { FC, HTMLAttributes } from 'react';
+import { ColorNames } from '../../../theme/types';
 import StyledText from './Text.styles';
 
-export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
+export interface TextProps extends Omit<HTMLAttributes<HTMLElement>, 'color'> {
   /**
    * Applies the theme typography styles.
    */
   variant?: 'text' | 'strong' | 'small' | 'button';
   /**
-   * The DOM tag.
+   * A component type or primitive that is rendered as the type of the root element.
    */
-  tag?: 'span';
+  as?: React.ElementType;
+  /**
+   * The color of the component.
+   */
+  color?: Extract<
+    ColorNames,
+    | 'brandPrimary'
+    | 'brandSecondary'
+    | 'textPrimary'
+    | 'textSecondary'
+    | 'textDark'
+    | 'textLight'
+    | 'textGray'
+  >;
+  /**
+   * Defines text that should be marked or highlighted.
+   */
+  marked?: Extract<
+    ColorNames,
+    'brandPrimary' | 'brandSecondary' | 'fonLight' | 'fonDark' | 'fonGray'
+  >;
 }
 
 const Text: FC<TextProps> = ({
   children,
   variant = 'text',
-  tag = 'span',
+  as = 'span',
+  color = 'textSecondary',
+  marked,
   ...props
 }) => (
-  <StyledText variant={variant} tag={tag} {...props}>
+  <StyledText
+    variant={variant}
+    as={as}
+    color={color}
+    {...props}
+    marked={marked}
+  >
     {children}
   </StyledText>
 );
