@@ -11,6 +11,12 @@ describe('<Bar />', () => {
         padding="small"
         margin="small"
         position="fixed"
+        zIndex={1000}
+        color="primary"
+        justify="center"
+        direction="column"
+        wrap="wrap"
+        align="center"
       >
         <div>Header</div>
       </Bar>,
