@@ -19,7 +19,7 @@ const Link = ({
   children,
   disabled = false,
   underline,
-  color = 'brandSecondary',
+  color,
   marked,
   variant = 'strong',
   ...props
