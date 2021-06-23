@@ -39,3 +39,18 @@ export interface IPalette {
     gray: string;
   };
 }
+
+export type ColorNames =
+  | 'brandPrimary'
+  | 'brandSecondary'
+  | 'textPrimary'
+  | 'textSecondary'
+  | 'textLight'
+  | 'textDark'
+  | 'textGray'
+  | 'dark'
+  | 'light'
+  | 'gray'
+  | 'fonDark'
+  | 'fonLight'
+  | 'fonGray';
