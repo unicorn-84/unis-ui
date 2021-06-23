@@ -2,24 +2,17 @@ import * as React from 'react';
 import { render, screen } from '@testing-library/react';
 import Link from '.';
 
-describe('Link', () => {
-  it('renders Link correctly', () => {
-    render(<Link href="#">link</Link>);
-    expect(screen.getByText('link')).toBeInTheDocument();
-  });
-
-  it('renders disabled Link correctly', () => {
+describe('<Link />', () => {
+  it('should render correctly', () => {
     render(
-      <Link disabled href="#">
-        link
-      </Link>,
-    );
-    expect(screen.getByText('link')).toBeInTheDocument();
-  });
-
-  it('renders underlined Link correctly', () => {
-    render(
-      <Link underline="always" href="#">
+      <Link
+        href="#"
+        variant="strong"
+        marked="fonGray"
+        color="textLight"
+        disabled
+        underline="always"
+      >
         link
       </Link>,
     );

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { LinkProps } from '.';
 import { DefaultTheme as theme } from '../../../theme';
+import { Colors } from '../../../theme/DefaultTheme/defaultPalette';
 
 const disabledStyles = css`
   pointer-events: none;
@@ -37,13 +38,16 @@ const underlineStyles = (underline: LinkProps['underline']) => {
 };
 
 const StyledLink = styled.a<LinkProps>`
-  /* FIXME: */
-  /* color: ${theme.palette?.brand?.secondary} !important; */
   cursor: pointer;
 
   ${({ disabled }) => disabled && disabledStyles}
 
   ${({ underline }) => underlineStyles(underline)}
+
+  ${({ variant }) => theme.typography[variant || 'text']};
+
+  color: ${({ color }) => color && Colors[color]};
+  background-color: ${({ marked }) => marked && Colors[marked]};
 `;
 
 StyledLink.defaultProps = {

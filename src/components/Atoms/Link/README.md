@@ -6,7 +6,7 @@ A text link.
 
 ```javascript
 import { Link } from '@web-uni/unis';
-<Link href="#">Text</Link>
+<Link>Text</Link>
 ```
 
 ## Properties
@@ -15,7 +15,7 @@ import { Link } from '@web-uni/unis';
 
 Whether the anchor is disabled.
 
-*Type:* "true" | "false"
+*Type:* true | false
 
 *Required:* false
 
@@ -30,6 +30,36 @@ Controls when the link should have an underline.
 *Required:* false
 
 *Default:*
+
+### marked
+
+Defines text that should be marked or highlighted.
+
+*Type:* "brandPrimary" | "brandSecondary" | "fonDark" | "fonLight" | "fonGray",
+
+*Required:* false
+
+*Default:*
+
+### variant
+
+Applies the theme typography styles.
+
+*Type:* "text" | "strong" | "small" | "button",
+
+*Required:* false
+
+*Default:* "strong"
+
+### color
+
+The color of the component.
+
+*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textDark" | "textLight" | "textGray",
+
+*Required:* false
+
+*Default:* "brandSecondary"
 
 ## Intrinsic element
 
