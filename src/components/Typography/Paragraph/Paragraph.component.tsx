@@ -30,7 +30,7 @@ export interface ParagraphProps
 const Paragraph: FC<ParagraphProps> = ({
   children,
   variant = 'body',
-  color = 'textSecondary',
+  color,
   disableMargins,
   ...props
 }) => (
