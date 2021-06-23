@@ -22,7 +22,7 @@ const Heading: FC<HeadingProps> = ({
   children,
   variant = 'title',
   marked,
-  color = 'textPrimary',
+  color,
   disableMargins = false,
   ...props
 }) => (

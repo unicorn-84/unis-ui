@@ -49,9 +49,6 @@ export default {
           summary:
             'brandPrimary | brandSecondary | textPrimary | textSecondary | textDark | textLight | textGray',
         },
-        defaultValue: {
-          summary: 'textPrimary',
-        },
       },
       control: {
         type: 'select',
