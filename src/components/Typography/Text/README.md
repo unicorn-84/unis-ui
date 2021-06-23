@@ -31,6 +31,26 @@ The DOM tag or react component to use for the element.
 
 *Default:* span
 
+### marked
+
+Defines text that should be marked or highlighted.
+
+*Type:* "brandPrimary" | "brandSecondary" | "fonDark" | "fonLight" | "fonGray",
+
+*Required:* false
+
+*Default:*
+
+### color
+
+The color of the component.
+
+*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textDark" | "textLight" | "textGray",
+
+*Required:* false
+
+*Default:* "textSecondary"
+
 ## Intrinsic element
 
 ```

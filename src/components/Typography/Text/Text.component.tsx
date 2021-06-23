@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes } from 'react';
 import { ColorNames } from '../../../theme/types';
-import StyledText from './Text.styles';
+import StyledText from './Text.style';
 
 export interface TextProps extends Omit<HTMLAttributes<HTMLElement>, 'color'> {
   /**
