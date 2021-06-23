@@ -49,7 +49,7 @@ The color of the component.
 
 *Required:* false
 
-*Default:* "textSecondary"
+*Default:*
 
 ## Intrinsic element
 
