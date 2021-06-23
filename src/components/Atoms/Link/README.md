@@ -59,7 +59,7 @@ The color of the component.
 
 *Required:* false
 
-*Default:* "brandSecondary"
+*Default:*
 
 ## Intrinsic element
 
