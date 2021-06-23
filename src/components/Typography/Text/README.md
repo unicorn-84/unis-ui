@@ -21,15 +21,15 @@ A arbitrary text can define its look via defined variants.
 
 *Default:* "text"
 
-### tag
+### as
 
-The DOM tag.
+The DOM tag or react component to use for the element.
 
-*Type:* "span"
+*Type:* string | function
 
 *Required:* false
 
-*Default:* "span"
+*Default:* span
 
 ## Intrinsic element
 

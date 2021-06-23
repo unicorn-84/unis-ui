@@ -27,19 +27,47 @@ export default {
         options: ['text', 'strong', 'small', 'button'],
       },
     },
-    tag: {
-      description: 'The DOM tag.',
+    color: {
+      description: 'The color of the component.',
       table: {
         type: {
-          summary: 'span',
+          summary:
+            'brandPrimary | brandSecondary | textPrimary | textSecondary | textDark | textLight | textGray',
         },
         defaultValue: {
-          summary: 'span',
+          summary: 'textSecondary',
         },
       },
       control: {
         type: 'select',
-        options: ['span'],
+        options: [
+          'brandPrimary',
+          'brandSecondary',
+          'textPrimary',
+          'textSecondary',
+          'textDark',
+          'textLight',
+          'textGray',
+        ],
+      },
+    },
+    marked: {
+      description: 'Defines text that should be marked or highlighted.',
+      table: {
+        type: {
+          summary:
+            'brandPrimary | brandSecondary | fonDark | fonLight | fonGray',
+        },
+      },
+      control: {
+        type: 'select',
+        options: [
+          'brandPrimary',
+          'brandSecondary',
+          'fonDark',
+          'fonLight',
+          'fonGray',
+        ],
       },
     },
   },
