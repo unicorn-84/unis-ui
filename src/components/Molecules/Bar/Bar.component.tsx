@@ -1,11 +1,9 @@
 import * as React from 'react';
-import Container, { ContainerProps } from '../../Atoms/Container';
 import Box, { BoxProps } from '../../Atoms/Box';
 import BarContainer from './Bar.style';
 
 export interface BarProps
   extends Omit<React.HTMLAttributes<HTMLElement>, 'color'>,
-    Pick<ContainerProps, 'maxWidth'>,
     Pick<
       BoxProps,
       'margin' | 'padding' | 'justify' | 'align' | 'direction' | 'wrap'
@@ -17,26 +15,25 @@ export interface BarProps
   /**
    * The positioning type.
    */
-  position?: 'absolute' | 'fixed' | 'relative' | 'static' | 'sticky';
+  fixed?: 'top' | 'right' | 'bottom' | 'left';
   /**
    * The z-index CSS property.
    */
   zIndex?: number;
   /**
-   * The color of the component.
+   * The colors of the component.
    */
-  color?: 'primary' | 'secondary' | 'light' | 'dark' | 'gray';
+  variant?: 'primary' | 'secondary' | 'light' | 'dark' | 'gray';
 }
 
 const Header: React.FC<BarProps> = ({
   children,
-  maxWidth,
   as,
   margin,
   padding,
-  position,
+  fixed,
   zIndex,
-  color = 'light',
+  variant = 'light',
   justify,
   align,
   direction,
@@ -47,22 +44,20 @@ const Header: React.FC<BarProps> = ({
     <BarContainer
       {...props}
       as={as}
-      position={position}
+      fixed={fixed}
       zIndex={zIndex}
-      color={color}
+      variant={variant}
     >
-      <Container maxWidth={maxWidth}>
-        <Box
-          margin={margin}
-          padding={padding}
-          justify={justify}
-          direction={direction}
-          align={align}
-          wrap={wrap}
-        >
-          {children}
-        </Box>
-      </Container>
+      <Box
+        margin={margin}
+        padding={padding}
+        justify={justify}
+        direction={direction}
+        align={align}
+        wrap={wrap}
+      >
+        {children}
+      </Box>
     </BarContainer>
   );
 };
