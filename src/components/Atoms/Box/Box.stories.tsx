@@ -176,18 +176,6 @@ export default {
         options: ['auto', 'full', '1/2', '1/3', '1/4', '2/3', '2/4', '3/4'],
       },
     },
-    fill: {
-      description: 'Whether the width and/or height should fill the container.',
-      table: {
-        type: {
-          summary: 'true | false | horizontal | vertical',
-        },
-      },
-      control: {
-        type: 'select',
-        options: [true, false, 'horizontal', 'vertical'],
-      },
-    },
     height: {
       description: 'A fixed height.',
       table: {

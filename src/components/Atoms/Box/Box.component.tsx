@@ -64,25 +64,21 @@ export interface BoxProps
   /**
    * A fixed or relative size along its container's main axis.
    */
-  basis?: Size | string;
-  /**
-   * Whether the width and/or height should fill the container.
-   */
-  fill?: boolean | 'horizontal' | 'vertical';
+  basis?: Size;
   /**
    * A fixed height.
    */
   height?:
-    | Size
     | string
-    | Partial<Record<Exclude<SizeName, 'width'>, Size | string>>;
+    | Size
+    | Partial<Record<Exclude<SizeName, 'width'>, string | Size>>;
   /**
    * A fixed width.
    */
   width?:
-    | Size
     | string
-    | Partial<Record<Exclude<SizeName, 'height'>, Size | string>>;
+    | Size
+    | Partial<Record<Exclude<SizeName, 'height'>, string | Size>>;
 }
 
 const Box: FC<BoxProps> = ({
@@ -99,7 +95,6 @@ const Box: FC<BoxProps> = ({
   as,
   display = 'flex',
   basis,
-  fill,
   height,
   width,
   ...props
@@ -117,7 +112,6 @@ const Box: FC<BoxProps> = ({
     as={as}
     display={display}
     basis={basis}
-    fill={fill}
     height={height}
     width={width}
     {...props}

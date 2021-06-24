@@ -2,26 +2,6 @@ import styled, { css } from 'styled-components';
 import { BoxProps } from './Box.component';
 import { DefaultTheme as theme } from '../../../theme';
 
-const createFillStyle = ({ fill }: BoxProps) => {
-  if (fill === 'horizontal') {
-    return css`
-      width: 100%;
-    `;
-  }
-  if (fill === 'vertical') {
-    return css`
-      height: 100%;
-    `;
-  }
-  if (fill) {
-    return css`
-      width: 100%;
-      height: 100%;
-    `;
-  }
-  return;
-};
-
 // TODO:
 const BASIS_MAP = new Map([
   ['auto', 'auto'],
@@ -55,23 +35,25 @@ function createHeightStyle({ height }: BoxProps) {
 
     Object.entries(height).forEach(item => {
       const [key, value] = item;
-      if (key === 'min') {
-        style = css`
-          ${style};
-          min-height: ${BASIS_MAP.get(value) || value};
-        `;
-      }
-      if (key === 'max') {
-        style = css`
-          ${style};
-          max-height: ${BASIS_MAP.get(value) || value};
-        `;
-      }
-      if (key === 'height') {
-        style = css`
-          ${style};
-          height: ${BASIS_MAP.get(value) || value};
-        `;
+      if (typeof value === 'string') {
+        if (key === 'min') {
+          style = css`
+            ${style};
+            min-height: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'max') {
+          style = css`
+            ${style};
+            max-height: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'height') {
+          style = css`
+            ${style};
+            height: ${BASIS_MAP.get(value) || value};
+          `;
+        }
       }
     });
     return style;
@@ -91,23 +73,25 @@ function createWidthStyle({ width }: BoxProps) {
 
     Object.entries(width).forEach(item => {
       const [key, value] = item;
-      if (key === 'min') {
-        style = css`
-          ${style};
-          min-width: ${BASIS_MAP.get(value) || value};
-        `;
-      }
-      if (key === 'max') {
-        style = css`
-          ${style};
-          max-width: ${BASIS_MAP.get(value) || value};
-        `;
-      }
-      if (key === 'width') {
-        style = css`
-          ${style};
-          width: ${BASIS_MAP.get(value) || value};
-        `;
+      if (typeof value === 'string') {
+        if (key === 'min') {
+          style = css`
+            ${style};
+            min-width: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'max') {
+          style = css`
+            ${style};
+            max-width: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'width') {
+          style = css`
+            ${style};
+            width: ${BASIS_MAP.get(value) || value};
+          `;
+        }
       }
     });
     return style;
@@ -237,8 +221,6 @@ const BoxContainer = styled.div<BoxProps>`
   ${({ padding }) => padding && getPaddingStyle};
 
   ${({ basis }) => basis && createFlexBasisStyle};
-
-  ${({ fill }) => fill && createFillStyle};
 
   ${({ height }) => height && createHeightStyle}
 
