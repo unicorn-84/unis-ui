@@ -153,6 +153,16 @@ The CSS display property.
 
 *Default:* flex
 
+### basis
+
+A fixed or relative size along its container's main axis.
+
+*Type:* auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+
+*Required:* false
+
+*Default:*
+
 ## Intrinsic element
 
 ```

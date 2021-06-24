@@ -1,6 +1,26 @@
 import styled, { css } from 'styled-components';
 import { BoxProps } from './Box.component';
 import { DefaultTheme as theme } from '../../../theme';
+// TODO:
+const BASIS_MAP = new Map([
+  ['auto', 'auto'],
+  ['full', '100%'],
+  ['1/2', '50%'],
+  ['1/3', '33,33%'],
+  ['1/4', '25%'],
+  ['2/4', '50%'],
+  ['3/4', '75%'],
+  ['2/3', '66,66%'],
+]);
+
+function createFlexBasisStyle({ basis }: BoxProps) {
+  if (typeof basis === 'string') {
+    return css`
+      flex-basis: ${BASIS_MAP.get(basis) || basis};
+    `;
+  }
+  return;
+}
 
 const getMarginStyle = ({ margin }: BoxProps) => {
   if (margin) {
@@ -122,6 +142,8 @@ const BoxContainer = styled.div<BoxProps>`
   ${({ margin }) => margin && getMarginStyle};
 
   ${({ padding }) => padding && getPaddingStyle};
+
+  ${({ basis }) => basis && createFlexBasisStyle}
 `;
 
 BoxContainer.defaultProps = {

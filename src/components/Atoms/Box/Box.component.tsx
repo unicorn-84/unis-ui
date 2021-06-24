@@ -56,6 +56,19 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
    * A component type or primitive that is rendered as the type of the root element.
    */
   as?: React.ElementType;
+  /**
+   * A fixed or relative size along its container's main axis.
+   */
+  basis?:
+    | 'auto'
+    | 'full'
+    | '1/2'
+    | '1/3'
+    | '1/4'
+    | '2/3'
+    | '2/4'
+    | '3/4'
+    | String;
 }
 
 const Box: FC<BoxProps> = ({
@@ -71,6 +84,7 @@ const Box: FC<BoxProps> = ({
   gap,
   as,
   display = 'flex',
+  basis,
   ...props
 }) => (
   <BoxContainer
@@ -85,6 +99,7 @@ const Box: FC<BoxProps> = ({
     gap={gap}
     as={as}
     display={display}
+    basis={basis}
     {...props}
   >
     {children}
