@@ -1,23 +1,12 @@
 import styled, { css } from 'styled-components';
 import { BoxProps } from './Box.component';
 import { DefaultTheme as theme } from '../../../theme';
-
-// TODO:
-const BASIS_MAP = new Map([
-  ['auto', 'auto'],
-  ['full', '100%'],
-  ['1/2', '50%'],
-  ['1/3', '33,33%'],
-  ['1/4', '25%'],
-  ['2/4', '50%'],
-  ['3/4', '75%'],
-  ['2/3', '66,66%'],
-]);
+import { SizeNames } from '../../../theme/types';
 
 function createFlexBasisStyle({ basis }: BoxProps) {
   if (typeof basis === 'string') {
     return css`
-      flex-basis: ${BASIS_MAP.get(basis) || basis};
+      flex-basis: ${theme.sizing.get(basis) || basis};
     `;
   }
   return;
@@ -27,10 +16,9 @@ function createHeightStyle({ height }: BoxProps) {
   if (height) {
     if (typeof height === 'string') {
       return css`
-        height: ${BASIS_MAP.get(height) || height};
+        height: ${theme.sizing.get(height as SizeNames) || height};
       `;
     }
-
     let style = css``;
 
     Object.entries(height).forEach(item => {
@@ -39,19 +27,19 @@ function createHeightStyle({ height }: BoxProps) {
         if (key === 'min') {
           style = css`
             ${style};
-            min-height: ${BASIS_MAP.get(value) || value};
+            min-height: ${theme.sizing.get(value as SizeNames) || value};
           `;
         }
         if (key === 'max') {
           style = css`
             ${style};
-            max-height: ${BASIS_MAP.get(value) || value};
+            max-height: ${theme.sizing.get(value as SizeNames) || value};
           `;
         }
         if (key === 'height') {
           style = css`
             ${style};
-            height: ${BASIS_MAP.get(value) || value};
+            height: ${theme.sizing.get(value as SizeNames) || value};
           `;
         }
       }
@@ -65,7 +53,7 @@ function createWidthStyle({ width }: BoxProps) {
   if (width) {
     if (typeof width === 'string') {
       return css`
-        width: ${BASIS_MAP.get(width) || width};
+        width: ${theme.sizing.get(width as SizeNames) || width};
       `;
     }
 
@@ -77,19 +65,19 @@ function createWidthStyle({ width }: BoxProps) {
         if (key === 'min') {
           style = css`
             ${style};
-            min-width: ${BASIS_MAP.get(value) || value};
+            min-width: ${theme.sizing.get(width as SizeNames) || width};
           `;
         }
         if (key === 'max') {
           style = css`
             ${style};
-            max-width: ${BASIS_MAP.get(value) || value};
+            max-width: ${theme.sizing.get(width as SizeNames) || width};
           `;
         }
         if (key === 'width') {
           style = css`
             ${style};
-            width: ${BASIS_MAP.get(value) || value};
+            width: ${theme.sizing.get(width as SizeNames) || width};
           `;
         }
       }
@@ -103,7 +91,7 @@ const getMarginStyle = ({ margin }: BoxProps) => {
   if (margin) {
     if (typeof margin === 'string') {
       return css`
-        margin: ${theme.spacing[margin]};
+        margin: ${theme.spacing.get(margin)};
       `;
     }
 
@@ -115,22 +103,22 @@ const getMarginStyle = ({ margin }: BoxProps) => {
       if (key !== 'x' && key !== 'y') {
         style = css`
           ${style};
-          ${`margin-${key}: ${theme.spacing[value || 'none']}`};
+          ${`margin-${key}: ${theme.spacing.get(value)}`};
         `;
       }
 
       if (key === 'x') {
         style = css`
-          margin-left: ${theme.spacing[value || 'none']};
-          margin-right: ${theme.spacing[value || 'none']};
+          margin-left: ${theme.spacing.get(value)};
+          margin-right: ${theme.spacing.get(value)};
           ${style};
         `;
       }
 
       if (key === 'y') {
         style = css`
-          margin-top: ${theme.spacing[value || 'none']};
-          margin-bottom: ${theme.spacing[value || 'none']};
+          margin-top: ${theme.spacing.get(value)};
+          margin-bottom: ${theme.spacing.get(value)};
           ${style};
         `;
       }
@@ -144,7 +132,7 @@ const getPaddingStyle = ({ padding }: BoxProps) => {
   if (padding) {
     if (typeof padding === 'string') {
       return css`
-        padding: ${theme.spacing[padding]};
+        padding: ${theme.spacing.get(padding)};
       `;
     }
 
@@ -156,22 +144,22 @@ const getPaddingStyle = ({ padding }: BoxProps) => {
       if (key !== 'x' && key !== 'y') {
         style = css`
           ${style};
-          ${`padding-${key}: ${theme.spacing[value || 'none']}`};
+          ${`padding-${key}: ${theme.spacing.get(value)}`};
         `;
       }
 
       if (key === 'x') {
         style = css`
-          padding-left: ${theme.spacing[value || 'none']};
-          padding-right: ${theme.spacing[value || 'none']};
+          padding-left: ${theme.spacing.get(value)};
+          padding-right: ${theme.spacing.get(value)};
           ${style};
         `;
       }
 
       if (key === 'y') {
         style = css`
-          padding-top: ${theme.spacing[value || 'none']};
-          padding-bottom: ${theme.spacing[value || 'none']};
+          padding-top: ${theme.spacing.get(value)};
+          padding-bottom: ${theme.spacing.get(value)};
           ${style};
         `;
       }
@@ -186,13 +174,13 @@ const getGapStyle = ({ gap, direction, wrap }: BoxProps) => {
     if (direction === 'column' || direction === 'column-reverse') {
       return css`
         & > *:not(:last-child) {
-          margin-bottom: ${theme.spacing[gap]};
+          margin-bottom: ${theme.spacing.get(gap)};
         }
       `;
     }
     return css`
       & > *:not(:last-child) {
-        margin-right: ${theme.spacing[gap]};
+        margin-right: ${theme.spacing.get(gap)};
       }
     `;
   }

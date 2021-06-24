@@ -1,15 +1,11 @@
 import React, { FC, HTMLAttributes } from 'react';
-import { ISpacing } from '../../../theme/types';
+import { SpacingNames, SideNames, SizeNames } from '../../../theme/types';
 import BoxContainer from './Box.styles';
 
-type Side = 'x' | 'y' | 'top' | 'right' | 'bottom' | 'left';
-
-type Size = 'auto' | 'full' | '1/2' | '1/3' | '1/4' | '2/3' | '2/4' | '3/4';
-
-type SizeName = 'width' | 'height' | 'min' | 'max';
+type WidthHeightNames = 'width' | 'height' | 'min' | 'max';
 
 export interface BoxProps
-  extends Omit<HTMLAttributes<HTMLElement>, 'height' | 'width'> {
+  extends Omit<HTMLAttributes<HTMLElement>, 'height' | 'width' | 'color'> {
   /**
    * The CSS display property.
    */
@@ -48,15 +44,15 @@ export interface BoxProps
   /**
    * The amount of spacing between child elements.
    */
-  gap?: keyof ISpacing;
+  gap?: SpacingNames;
   /**
    * The amount of margin around the component.
    */
-  margin?: keyof ISpacing | Partial<Record<Side, keyof ISpacing>>;
+  margin?: SpacingNames | Partial<Record<SideNames, SpacingNames>>;
   /**
    * The amount of padding around the box contents/
    */
-  padding?: keyof ISpacing | Partial<Record<Side, keyof ISpacing>>;
+  padding?: SpacingNames | Partial<Record<SideNames, SpacingNames>>;
   /**
    * A component type or primitive that is rendered as the type of the root element.
    */
@@ -64,21 +60,21 @@ export interface BoxProps
   /**
    * A fixed or relative size along its container's main axis.
    */
-  basis?: Size;
+  basis?: SizeNames;
   /**
    * A fixed height.
    */
   height?:
     | string
-    | Size
-    | Partial<Record<Exclude<SizeName, 'width'>, string | Size>>;
+    | SizeNames
+    | Partial<Record<Exclude<WidthHeightNames, 'width'>, string | SizeNames>>;
   /**
    * A fixed width.
    */
   width?:
     | string
-    | Size
-    | Partial<Record<Exclude<SizeName, 'height'>, string | Size>>;
+    | SizeNames
+    | Partial<Record<Exclude<WidthHeightNames, 'height'>, string | SizeNames>>;
 }
 
 const Box: FC<BoxProps> = ({
@@ -89,8 +85,8 @@ const Box: FC<BoxProps> = ({
   grow,
   shrink,
   wrap,
-  margin = 'none',
-  padding = 'none',
+  margin,
+  padding,
   gap,
   as,
   display = 'flex',
