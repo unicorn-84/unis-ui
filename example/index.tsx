@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Nav, Link, Bar, Heading, Box } from '../src';
+import { Nav, Link, Bar, Box, Heading } from '../src';
 
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
   return (
-    <Bar as="header" color="secondary" padding={{ y: 'small' }}>
+    <Bar as="header" variant="secondary" padding={{ y: 'small' }}>
       <Box basis="1/4">
         <Heading level="h2" variant="title" disableMargins>
           Brand
