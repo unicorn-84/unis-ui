@@ -163,6 +163,16 @@ A fixed or relative size along its container's main axis.
 
 *Default:*
 
+### fill
+
+Whether the width and/or height should fill the container.
+
+*Type:* true | false | horizontal | vertical
+
+*Required:* false
+
+*Default:*
+
 ## Intrinsic element
 
 ```

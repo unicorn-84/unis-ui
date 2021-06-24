@@ -6,8 +6,14 @@ interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
   return (
-    <Bar as="header" variant="secondary" padding={{ y: 'small' }}>
-      <Box basis="1/4">
+    <Bar
+      as="header"
+      variant="secondary"
+      padding={{ y: 'small' }}
+      fixed="left"
+      direction="column"
+    >
+      <Box basis="1/4" fill>
         <Heading level="h2" variant="title" disableMargins>
           Brand
         </Heading>

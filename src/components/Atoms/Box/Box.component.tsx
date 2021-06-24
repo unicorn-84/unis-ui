@@ -69,6 +69,10 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
     | '2/4'
     | '3/4'
     | String;
+  /**
+   * Whether the width and/or height should fill the container.
+   */
+  fill?: boolean | 'horizontal' | 'vertical';
 }
 
 const Box: FC<BoxProps> = ({
@@ -85,6 +89,7 @@ const Box: FC<BoxProps> = ({
   as,
   display = 'flex',
   basis,
+  fill,
   ...props
 }) => (
   <BoxContainer
@@ -100,6 +105,7 @@ const Box: FC<BoxProps> = ({
     as={as}
     display={display}
     basis={basis}
+    fill={fill}
     {...props}
   >
     {children}

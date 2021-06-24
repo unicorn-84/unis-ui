@@ -1,6 +1,27 @@
 import styled, { css } from 'styled-components';
 import { BoxProps } from './Box.component';
 import { DefaultTheme as theme } from '../../../theme';
+
+const createFillStyle = ({ fill }: BoxProps) => {
+  if (fill === 'horizontal') {
+    return css`
+      width: 100%;
+    `;
+  }
+  if (fill === 'vertical') {
+    return css`
+      height: 100%;
+    `;
+  }
+  if (fill) {
+    return css`
+      width: 100%;
+      height: 100%;
+    `;
+  }
+  return;
+};
+
 // TODO:
 const BASIS_MAP = new Map([
   ['auto', 'auto'],
@@ -143,7 +164,9 @@ const BoxContainer = styled.div<BoxProps>`
 
   ${({ padding }) => padding && getPaddingStyle};
 
-  ${({ basis }) => basis && createFlexBasisStyle}
+  ${({ basis }) => basis && createFlexBasisStyle};
+
+  ${({ fill }) => fill && createFillStyle};
 `;
 
 BoxContainer.defaultProps = {
