@@ -1,6 +1,6 @@
 import { IEffects } from './IEffects';
 import { IPalette } from './IPalette';
-import { ISpacing } from './ISpacing';
+import { SizeNames, SpacingNames } from './Spacing';
 import { ITypeScale } from './ITypeScale';
 import { IBreakpoints } from './IBreakpoints';
 
@@ -9,7 +9,8 @@ export interface ITheme {
   palette: IPalette;
   typography: ITypeScale;
   effects: IEffects;
-  spacing: ISpacing;
+  spacing: Map<SpacingNames, string>;
+  sizing: Map<SizeNames, string>;
   breakpoints: IBreakpoints;
   // components?: Partial<IComponents>;
 }

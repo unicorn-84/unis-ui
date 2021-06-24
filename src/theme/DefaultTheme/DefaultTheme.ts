@@ -1,6 +1,6 @@
 import { defaultPalette } from './defaultPalette';
 import { defaultEffects } from './defaultEffects';
-import { defaultSpacing } from './defaultSpacing';
+import { defaultSizing, defaultSpacing } from './defaultSpacing';
 import { ITheme } from '../types';
 import { defaultTypeScale } from './defaultTypeScale';
 import { defaultBreakpoints } from './defaultBreakpoints';
@@ -11,5 +11,6 @@ export const DefaultTheme: ITheme = {
   effects: defaultEffects,
   typography: defaultTypeScale,
   spacing: defaultSpacing,
+  sizing: defaultSizing,
   breakpoints: defaultBreakpoints,
 };
