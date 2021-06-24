@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { BoxProps } from './Box.component';
 import { DefaultTheme as theme } from '../../../theme';
+
 // TODO:
 const BASIS_MAP = new Map([
   ['auto', 'auto'],
@@ -18,6 +19,82 @@ function createFlexBasisStyle({ basis }: BoxProps) {
     return css`
       flex-basis: ${BASIS_MAP.get(basis) || basis};
     `;
+  }
+  return;
+}
+
+function createHeightStyle({ height }: BoxProps) {
+  if (height) {
+    if (typeof height === 'string') {
+      return css`
+        height: ${BASIS_MAP.get(height) || height};
+      `;
+    }
+
+    let style = css``;
+
+    Object.entries(height).forEach(item => {
+      const [key, value] = item;
+      if (typeof value === 'string') {
+        if (key === 'min') {
+          style = css`
+            ${style};
+            min-height: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'max') {
+          style = css`
+            ${style};
+            max-height: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'height') {
+          style = css`
+            ${style};
+            height: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+      }
+    });
+    return style;
+  }
+  return;
+}
+
+function createWidthStyle({ width }: BoxProps) {
+  if (width) {
+    if (typeof width === 'string') {
+      return css`
+        width: ${BASIS_MAP.get(width) || width};
+      `;
+    }
+
+    let style = css``;
+
+    Object.entries(width).forEach(item => {
+      const [key, value] = item;
+      if (typeof value === 'string') {
+        if (key === 'min') {
+          style = css`
+            ${style};
+            min-width: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'max') {
+          style = css`
+            ${style};
+            max-width: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+        if (key === 'width') {
+          style = css`
+            ${style};
+            width: ${BASIS_MAP.get(value) || value};
+          `;
+        }
+      }
+    });
+    return style;
   }
   return;
 }
@@ -143,7 +220,11 @@ const BoxContainer = styled.div<BoxProps>`
 
   ${({ padding }) => padding && getPaddingStyle};
 
-  ${({ basis }) => basis && createFlexBasisStyle}
+  ${({ basis }) => basis && createFlexBasisStyle};
+
+  ${({ height }) => height && createHeightStyle}
+
+  ${({ width }) => width && createWidthStyle}
 `;
 
 BoxContainer.defaultProps = {

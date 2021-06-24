@@ -176,6 +176,28 @@ export default {
         options: ['auto', 'full', '1/2', '1/3', '1/4', '2/3', '2/4', '3/4'],
       },
     },
+    height: {
+      description: 'A fixed height.',
+      table: {
+        type: {
+          summary: 'auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string',
+        },
+      },
+      control: {
+        type: 'text',
+      },
+    },
+    width: {
+      description: 'A fixed width.',
+      table: {
+        type: {
+          summary: 'auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string',
+        },
+      },
+      control: {
+        type: 'text',
+      },
+    },
   },
 } as Meta;
 

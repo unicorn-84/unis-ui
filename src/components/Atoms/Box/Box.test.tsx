@@ -18,6 +18,8 @@ describe('<Box />', () => {
         padding="small"
         margin={{ bottom: 'small', x: 'medium' }}
         basis="full"
+        height={{ min: '100vh' }}
+        width={{ width: '1/2' }}
       >
         Box
       </Box>,

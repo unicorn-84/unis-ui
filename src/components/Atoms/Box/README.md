@@ -163,6 +163,42 @@ A fixed or relative size along its container's main axis.
 
 *Default:*
 
+### height
+
+A fixed height.
+
+*Type:*
+```
+  auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+  | {
+      height: auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+      max: auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+      min: auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+    }
+```
+
+*Required:* false
+
+*Default:*
+
+### width
+
+A fixed width.
+
+*Type:*
+```
+  auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+  | {
+      height: auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+      max: auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+      min: auto | full | 1/2 | 1/3 | 1/4 | 2/3 | 2/4 | 3/4 | string
+    }
+```
+
+*Required:* false
+
+*Default:*
+
 ## Intrinsic element
 
 ```
