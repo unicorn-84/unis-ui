@@ -43,6 +43,78 @@ function createFlexBasisStyle({ basis }: BoxProps) {
   return;
 }
 
+function createHeightStyle({ height }: BoxProps) {
+  if (height) {
+    if (typeof height === 'string') {
+      return css`
+        height: ${BASIS_MAP.get(height) || height};
+      `;
+    }
+
+    let style = css``;
+
+    Object.entries(height).forEach(item => {
+      const [key, value] = item;
+      if (key === 'min') {
+        style = css`
+          ${style};
+          min-height: ${BASIS_MAP.get(value) || value};
+        `;
+      }
+      if (key === 'max') {
+        style = css`
+          ${style};
+          max-height: ${BASIS_MAP.get(value) || value};
+        `;
+      }
+      if (key === 'height') {
+        style = css`
+          ${style};
+          height: ${BASIS_MAP.get(value) || value};
+        `;
+      }
+    });
+    return style;
+  }
+  return;
+}
+
+function createWidthStyle({ width }: BoxProps) {
+  if (width) {
+    if (typeof width === 'string') {
+      return css`
+        width: ${BASIS_MAP.get(width) || width};
+      `;
+    }
+
+    let style = css``;
+
+    Object.entries(width).forEach(item => {
+      const [key, value] = item;
+      if (key === 'min') {
+        style = css`
+          ${style};
+          min-width: ${BASIS_MAP.get(value) || value};
+        `;
+      }
+      if (key === 'max') {
+        style = css`
+          ${style};
+          max-width: ${BASIS_MAP.get(value) || value};
+        `;
+      }
+      if (key === 'width') {
+        style = css`
+          ${style};
+          width: ${BASIS_MAP.get(value) || value};
+        `;
+      }
+    });
+    return style;
+  }
+  return;
+}
+
 const getMarginStyle = ({ margin }: BoxProps) => {
   if (margin) {
     if (typeof margin === 'string') {
@@ -167,6 +239,10 @@ const BoxContainer = styled.div<BoxProps>`
   ${({ basis }) => basis && createFlexBasisStyle};
 
   ${({ fill }) => fill && createFillStyle};
+
+  ${({ height }) => height && createHeightStyle}
+
+  ${({ width }) => width && createWidthStyle}
 `;
 
 BoxContainer.defaultProps = {

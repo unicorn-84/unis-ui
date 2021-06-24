@@ -4,7 +4,12 @@ import BoxContainer from './Box.styles';
 
 type Side = 'x' | 'y' | 'top' | 'right' | 'bottom' | 'left';
 
-export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
+type Size = 'auto' | 'full' | '1/2' | '1/3' | '1/4' | '2/3' | '2/4' | '3/4';
+
+type SizeName = 'width' | 'height' | 'min' | 'max';
+
+export interface BoxProps
+  extends Omit<HTMLAttributes<HTMLElement>, 'height' | 'width'> {
   /**
    * The CSS display property.
    */
@@ -59,20 +64,25 @@ export interface BoxProps extends HTMLAttributes<HTMLDivElement> {
   /**
    * A fixed or relative size along its container's main axis.
    */
-  basis?:
-    | 'auto'
-    | 'full'
-    | '1/2'
-    | '1/3'
-    | '1/4'
-    | '2/3'
-    | '2/4'
-    | '3/4'
-    | String;
+  basis?: Size | string;
   /**
    * Whether the width and/or height should fill the container.
    */
   fill?: boolean | 'horizontal' | 'vertical';
+  /**
+   * A fixed height.
+   */
+  height?:
+    | Size
+    | string
+    | Partial<Record<Exclude<SizeName, 'width'>, Size | string>>;
+  /**
+   * A fixed width.
+   */
+  width?:
+    | Size
+    | string
+    | Partial<Record<Exclude<SizeName, 'height'>, Size | string>>;
 }
 
 const Box: FC<BoxProps> = ({
@@ -90,6 +100,8 @@ const Box: FC<BoxProps> = ({
   display = 'flex',
   basis,
   fill,
+  height,
+  width,
   ...props
 }) => (
   <BoxContainer
@@ -106,6 +118,8 @@ const Box: FC<BoxProps> = ({
     display={display}
     basis={basis}
     fill={fill}
+    height={height}
+    width={width}
     {...props}
   >
     {children}

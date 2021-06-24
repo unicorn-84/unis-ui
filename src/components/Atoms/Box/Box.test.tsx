@@ -19,6 +19,8 @@ describe('<Box />', () => {
         margin={{ bottom: 'small', x: 'medium' }}
         basis="full"
         fill
+        height={{ min: '100vh' }}
+        width={{ width: '1/2' }}
       >
         Box
       </Box>,

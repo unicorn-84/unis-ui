@@ -6,33 +6,11 @@ interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
   return (
-    <Bar
-      as="header"
-      variant="secondary"
-      padding={{ y: 'small' }}
-      fixed="left"
-      direction="column"
-    >
-      <Box basis="1/4" fill>
-        <Heading level="h2" variant="title" disableMargins>
-          Brand
-        </Heading>
-      </Box>
-      <Nav justify="space-around">
-        {['Home', 'About', 'Gallery', 'Contact'].map((item, i) => (
-          <Link href="#" color="textLight" key={i}>
-            {item}
-          </Link>
-        ))}
-      </Nav>
-      <Nav justify="space-evenly">
-        {['...more'].map((item, i) => (
-          <Link href="#" color="textLight" key={i}>
-            {item}
-          </Link>
-        ))}
-      </Nav>
-    </Bar>
+    <Box height={{ min: '100vh' }} width="1/2" align="center" justify="center">
+      <Heading level="h2" variant="title" disableMargins>
+        Brand
+      </Heading>
+    </Box>
   );
 };
 
