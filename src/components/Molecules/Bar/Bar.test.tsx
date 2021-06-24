@@ -7,12 +7,11 @@ describe('<Bar />', () => {
     render(
       <Bar
         as="header"
-        maxWidth="lg"
         padding="small"
         margin="small"
-        position="fixed"
+        fixed="bottom"
         zIndex={1000}
-        color="primary"
+        variant="primary"
         justify="center"
         direction="column"
         wrap="wrap"

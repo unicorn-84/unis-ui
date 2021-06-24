@@ -2,46 +2,50 @@ import styled, { css } from 'styled-components';
 import { DefaultTheme as theme } from '../../../theme';
 import { BarProps } from '.';
 
-function createPositionStyle({ position }: BarProps) {
-  switch (position) {
-    case 'fixed':
+function createFixedStyle({ fixed }: BarProps) {
+  let style = css`
+    position: fixed;
+    @media print {
+      position: absolute;
+    }
+  `;
+  switch (fixed) {
+    case 'top':
       return css`
-        position: fixed;
         left: 0;
         right: 0;
         top: 0;
-        @media print {
-          position: absolute;
-        }
+        ${style};
       `;
-    case 'absolute':
+    case 'right':
       return css`
-        position: absolute;
-        left: 0;
         right: 0;
         top: 0;
+        bottom: 0;
+        ${style};
       `;
-    case 'relative':
+    case 'bottom':
       return css`
-        position: 'relative';
-      `;
-    case 'sticky': {
-      return css`
-        position: 'sticky';
-        left: 0;
         right: 0;
+        left: 0;
+        bottom: 0;
+        ${style};
+      `;
+    case 'left': {
+      return css`
+        left: 0;
         top: 0;
+        bottom: 0;
+        ${style};
       `;
     }
     default:
-      return css`
-        position: 'static';
-      `;
+      return;
   }
 }
 
-function createColorStyle({ color }: BarProps) {
-  switch (color) {
+function createVariantStyle({ variant }: BarProps) {
+  switch (variant) {
     case 'primary':
       return css`
         background-color: ${theme.palette.brand.primary};
@@ -73,8 +77,8 @@ function createColorStyle({ color }: BarProps) {
 }
 
 const HeaderContainer = styled.div<BarProps>`
-  ${({ position }) => position && createPositionStyle}
-  ${({ color }) => color && createColorStyle}
+  ${({ fixed }) => fixed && createFixedStyle}
+  ${({ variant }) => variant && createVariantStyle}
   z-index: ${({ zIndex }) => zIndex};
 `;
 
