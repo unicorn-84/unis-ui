@@ -17,6 +17,7 @@ describe('<Box />', () => {
         direction="row"
         padding="small"
         margin={{ bottom: 'small', x: 'medium' }}
+        basis="full"
       >
         Box
       </Box>,
