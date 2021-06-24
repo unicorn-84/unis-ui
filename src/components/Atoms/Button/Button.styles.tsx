@@ -87,9 +87,9 @@ const baseButtonStyles = css`
 
   ${theme.typography?.['button']};
 
-  padding: 0 ${theme.spacing?.small};
+  padding: 0 ${theme.spacing.get('small')};
   border: none;
-  border-radius: ${theme.spacing?.xxsmall};
+  border-radius: ${theme.spacing.get('small')};
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
