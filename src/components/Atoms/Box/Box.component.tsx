@@ -1,6 +1,6 @@
 import React, { FC, HTMLAttributes } from 'react';
-import { SpacingNames, SideNames, SizeNames } from '../../../theme/types';
-import BoxContainer from './Box.styles';
+import { ISides, ISizes, ISpacing } from '../../../theme/types';
+import BoxContainer from './Box.style';
 
 type WidthHeightNames = 'width' | 'height' | 'min' | 'max';
 
@@ -44,15 +44,15 @@ export interface BoxProps
   /**
    * The amount of spacing between child elements.
    */
-  gap?: SpacingNames;
+  gap?: keyof ISpacing;
   /**
    * The amount of margin around the component.
    */
-  margin?: SpacingNames | Partial<Record<SideNames, SpacingNames>>;
+  margin?: keyof ISpacing | Partial<Record<keyof ISides, keyof ISpacing>>;
   /**
    * The amount of padding around the box contents/
    */
-  padding?: SpacingNames | Partial<Record<SideNames, SpacingNames>>;
+  padding?: keyof ISpacing | Partial<Record<keyof ISides, keyof ISpacing>>;
   /**
    * A component type or primitive that is rendered as the type of the root element.
    */
@@ -60,21 +60,25 @@ export interface BoxProps
   /**
    * A fixed or relative size along its container's main axis.
    */
-  basis?: SizeNames;
+  basis?: keyof ISpacing;
   /**
    * A fixed height.
    */
   height?:
-    | string
-    | SizeNames
-    | Partial<Record<Exclude<WidthHeightNames, 'width'>, string | SizeNames>>;
+    | (string & {})
+    | keyof ISizes
+    | Partial<
+        Record<Exclude<WidthHeightNames, 'width'>, string | keyof ISizes>
+      >;
   /**
    * A fixed width.
    */
   width?:
-    | string
-    | SizeNames
-    | Partial<Record<Exclude<WidthHeightNames, 'height'>, string | SizeNames>>;
+    | (string & {})
+    | keyof ISizes
+    | Partial<
+        Record<Exclude<WidthHeightNames, 'height'>, string | keyof ISizes>
+      >;
 }
 
 const Box: FC<BoxProps> = ({

@@ -1,8 +1,9 @@
+import { IObjectKeys } from '.';
+
 /**
  * Spacing.
  */
-
-export interface ISpacing {
+export interface ISpacing extends IObjectKeys {
   none: string;
   xxsmall: string;
   xsmall: string;

@@ -3,7 +3,7 @@ import { IPalette } from './IPalette';
 import { ISpacing } from './ISpacing';
 import { ITypeScale } from './ITypeScale';
 import { IBreakpoints } from './IBreakpoints';
-import { ISizing } from './ISizing';
+import { ISizes } from './ISizes';
 
 export interface ITheme {
   name: string;
@@ -11,7 +11,7 @@ export interface ITheme {
   typography: ITypeScale;
   effects: IEffects;
   spacing: ISpacing;
-  sizing: ISizing;
+  sizes: ISizes;
   breakpoints: IBreakpoints;
   // components?: Partial<IComponents>;
 }

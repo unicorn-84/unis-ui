@@ -1,7 +1,9 @@
+import { IObjectKeys } from '.';
+
 /**
  * Color palette.
  */
-export interface IPalette {
+export interface IPalette extends IObjectKeys {
   /**
    * Code for Brand colors.
    */

@@ -1,8 +1,9 @@
+import { IObjectKeys } from '.';
+
 /**
  * Sizing.
  */
-
-export interface ISizing {
+export interface ISizes extends IObjectKeys {
   auto: string;
   '1/2': string;
   '1/3': string;
