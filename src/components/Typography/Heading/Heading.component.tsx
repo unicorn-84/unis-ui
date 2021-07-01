@@ -1,12 +1,11 @@
 import React, { FC, HTMLAttributes } from 'react';
+import { IPalette } from '../../../theme/types';
 import { ParagraphProps } from '../Paragraph';
-import { TextProps } from '../Text';
 import StyledHeading from './Heading.style';
 
 export interface HeadingProps
-  extends Omit<HTMLAttributes<HTMLHeadingElement>, 'color'>,
-    Pick<TextProps, 'marked' | 'color'>,
-    Pick<ParagraphProps, 'disableMargins'> {
+  extends Pick<ParagraphProps, 'disableMargins'>,
+    Omit<HTMLAttributes<HTMLElement>, 'color'> {
   /**
    * Applies the theme typography styles.
    */
@@ -15,6 +14,14 @@ export interface HeadingProps
    * The heading level. It corresponds to the number after the 'H' for the DOM tag.
    */
   level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  /**
+   * The color of the component.
+   */
+  color?: keyof IPalette;
+  /**
+   * Defines text that should be marked or highlighted.
+   */
+  marked?: keyof IPalette;
 }
 
 const Heading: FC<HeadingProps> = ({

@@ -5,16 +5,8 @@ export * from './ISpacing';
 export * from './ISizes';
 export * from './ITheme';
 export * from './IBreakpoints';
-
-export interface IObjectKeys {
-  [key: string]: string;
-}
-
-export interface ISides extends IObjectKeys {
-  x: string;
-  y: string;
-  top: string;
-  right: string;
-  bottom: string;
-  left: string;
-}
+export * from './IObjectKeys';
+export * from './ISides';
+export * from './IFlexProps';
+export * from './IBase';
+export * from './ITextStyles';
