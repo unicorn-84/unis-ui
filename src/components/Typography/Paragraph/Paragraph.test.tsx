@@ -5,7 +5,12 @@ import Paragraph from '.';
 describe('<Paragraph />', () => {
   it('should render correctly', () => {
     render(
-      <Paragraph variant="body" color="brandPrimary" disableMargins>
+      <Paragraph
+        variant="body"
+        color="brandPrimary"
+        disableMargins
+        marked="fonLight"
+      >
         Paragraph component
       </Paragraph>,
     );

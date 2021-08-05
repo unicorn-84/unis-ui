@@ -5,7 +5,7 @@ import Text from '.';
 describe('<Text />', () => {
   it('should render correctly', () => {
     render(
-      <Text as="span" variant="strong" color="textSecondary" marked="fonGray">
+      <Text as="span" variant="strong" color="brandPrimary" marked="fonGray">
         Text component
       </Text>,
     );

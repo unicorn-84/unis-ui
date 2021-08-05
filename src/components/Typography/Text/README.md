@@ -19,23 +19,13 @@ A arbitrary text can define its look via defined variants.
 
 *Required:* false
 
-*Default:* "text"
-
-### as
-
-The DOM tag or react component to use for the element.
-
-*Type:* string | function
-
-*Required:* false
-
-*Default:* span
+*Default:*
 
 ### marked
 
 Defines text that should be marked or highlighted.
 
-*Type:* "brandPrimary" | "brandSecondary" | "fonDark" | "fonLight" | "fonGray",
+*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textLight" | "textDark" | "textGray" | "dark" | "light" | "gray" | "fonLight" | "fonDark" | "fonGray"
 
 *Required:* false
 
@@ -45,7 +35,7 @@ Defines text that should be marked or highlighted.
 
 The color of the component.
 
-*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textDark" | "textLight" | "textGray",
+*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textLight" | "textDark" | "textGray" | "dark" | "light" | "gray" | "fonLight" | "fonDark" | "fonGray"
 
 *Required:* false
 

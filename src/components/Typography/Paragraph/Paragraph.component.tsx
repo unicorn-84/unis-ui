@@ -1,26 +1,15 @@
 import React, { FC, HTMLAttributes } from 'react';
-import { ColorNames } from '../../../theme/types/IPalette';
+import { IBase, ITextStyles } from '../../../theme/types';
 import StyledParagraph from './Paragraph.style';
 
 export interface ParagraphProps
-  extends Omit<HTMLAttributes<HTMLParagraphElement>, 'color'> {
+  extends IBase,
+    ITextStyles,
+    Omit<HTMLAttributes<HTMLElement>, 'color'> {
   /**
    * Applies the theme typography styles.
    */
   variant?: 'body';
-  /**
-   * The color of the component.
-   */
-  color?: Extract<
-    ColorNames,
-    | 'brandPrimary'
-    | 'brandSecondary'
-    | 'textPrimary'
-    | 'textSecondary'
-    | 'textDark'
-    | 'textLight'
-    | 'textGray'
-  >;
   /**
    * If 'true', the margins is removed.
    */
@@ -30,16 +19,10 @@ export interface ParagraphProps
 const Paragraph: FC<ParagraphProps> = ({
   children,
   variant = 'body',
-  color,
   disableMargins,
   ...props
 }) => (
-  <StyledParagraph
-    variant={variant}
-    color={color}
-    disableMargins={disableMargins}
-    {...props}
-  >
+  <StyledParagraph variant={variant} disableMargins={disableMargins} {...props}>
     {children}
   </StyledParagraph>
 );
