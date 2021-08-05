@@ -1,12 +1,12 @@
-import { IPalette } from '.';
+import { ColorName } from './IPalette';
 
 export interface ITextStyles {
   /**
    * The color of the component.
    */
-  color?: keyof IPalette;
+  color?: ColorName;
   /**
    * Defines text that should be marked or highlighted.
    */
-  marked?: keyof IPalette;
+  marked?: ColorName;
 }

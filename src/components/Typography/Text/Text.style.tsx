@@ -1,11 +1,20 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { DefaultTheme as theme } from '../../../theme';
 import { TextProps } from './Text.component';
+
+const createMarkedStyle = (marked: TextProps['marked']) => {
+  if (typeof marked === 'string') {
+    return css`
+      background-color: ${theme.palette[marked]};
+    `;
+  }
+  return;
+};
 
 const StyledText = styled.span<TextProps>`
   ${({ variant }) => variant && theme.typography[variant]};
   color: ${({ color }) => color && theme.palette[color]};
-  background-color: ${({ marked }) => marked && theme.palette[marked]};
+  ${({ marked }) => createMarkedStyle(marked)};
 `;
 
 StyledText.defaultProps = {

@@ -12,6 +12,7 @@ export const defaultPalette: IPalette = {
   textGray: '#b7b7b7',
   dark: '#0a0a0a',
   light: '#fff',
+  info: 'yellow',
   gray: '#b7b7b7',
   fonDark: '#0a0a0a',
   fonLight: '#b7b7b7',
