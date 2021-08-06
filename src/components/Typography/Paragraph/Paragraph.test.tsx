@@ -6,6 +6,7 @@ describe('<Paragraph />', () => {
   it('should render correctly', () => {
     render(
       <Paragraph
+        as="p"
         variant="body"
         color="brandPrimary"
         disableMargins

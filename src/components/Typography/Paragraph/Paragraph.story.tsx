@@ -32,7 +32,7 @@ export default {
       table: {
         type: {
           summary:
-            'brandPrimary | brandSecondary | textPrimary | textSecondary | textDark | textLight | textGray',
+            'brandPrimary | brandSecondary | textPrimary | textSecondary | textLight | textDark | textGray | dark | light | gray | fonLight |fonDark |fonGray',
         },
       },
       control: {
@@ -45,6 +45,39 @@ export default {
           'textDark',
           'textLight',
           'textGray',
+          'dark',
+          'light',
+          'gray',
+          'fonLight',
+          'fonDark',
+          'fonGray',
+        ],
+      },
+    },
+    marked: {
+      description: 'Defines text that should be marked or highlighted.',
+      table: {
+        type: {
+          summary:
+            'brandPrimary | brandSecondary | textPrimary | textSecondary | textLight | textDark | textGray | dark | light | gray | fonLight |fonDark |fonGray',
+        },
+      },
+      control: {
+        type: 'select',
+        options: [
+          'brandPrimary',
+          'brandSecondary',
+          'textPrimary',
+          'textSecondary',
+          'textDark',
+          'textLight',
+          'textGray',
+          'dark',
+          'light',
+          'gray',
+          'fonLight',
+          'fonDark',
+          'fonGray',
         ],
       },
     },
