@@ -2,7 +2,6 @@
  * Convert hex color to decimal values of channels.
  * @param hexColor A string of hex value color.
  */
-
 export const hexToChannels: (
   hexColor: string,
 ) => number[] | null = hexColor => {
