@@ -19,7 +19,7 @@ A arbitrary text can define its look via defined variants.
 
 *Required:* false
 
-*Default:*
+*Default:* "text"
 
 ### marked
 

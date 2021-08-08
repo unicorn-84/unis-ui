@@ -47,7 +47,7 @@ export default {
       table: {
         type: {
           summary:
-            'brandPrimary | brandSecondary | textPrimary | textSecondary | textDark | textLight | textGray',
+            'brandPrimary | brandSecondary | textPrimary | textSecondary | textLight | textDark | textGray | dark | light | gray | fonLight |fonDark |fonGray',
         },
       },
       control: {
@@ -60,6 +60,12 @@ export default {
           'textDark',
           'textLight',
           'textGray',
+          'dark',
+          'light',
+          'gray',
+          'fonLight',
+          'fonDark',
+          'fonGray',
         ],
       },
     },
@@ -68,7 +74,7 @@ export default {
       table: {
         type: {
           summary:
-            'brandPrimary | brandSecondary | fonDark | fonLight | fonGray',
+            'brandPrimary | brandSecondary | textPrimary | textSecondary | textLight | textDark | textGray | dark | light | gray | fonLight |fonDark |fonGray',
         },
       },
       control: {
@@ -76,8 +82,16 @@ export default {
         options: [
           'brandPrimary',
           'brandSecondary',
-          'fonDark',
+          'textPrimary',
+          'textSecondary',
+          'textDark',
+          'textLight',
+          'textGray',
+          'dark',
+          'light',
+          'gray',
           'fonLight',
+          'fonDark',
           'fonGray',
         ],
       },
