@@ -1,12 +1,8 @@
-import { IObjectKeys } from '.';
+export type BreakpointName = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 /**
  * Breakpoints.
  */
-export interface IBreakpoints extends IObjectKeys {
-  xs: string;
-  sm: string;
-  md: string;
-  lg: string;
-  xl: string;
-}
+export type IBreakpoints = {
+  [key in BreakpointName]: string;
+};
