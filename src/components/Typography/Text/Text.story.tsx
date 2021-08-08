@@ -18,6 +18,9 @@ export default {
         type: {
           summary: 'text | strong | small | button',
         },
+        defaultValue: {
+          summary: 'text',
+        },
       },
       control: {
         type: 'select',

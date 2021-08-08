@@ -12,7 +12,7 @@ export interface TextProps
   variant?: 'text' | 'strong' | 'small' | 'button';
 }
 
-const Text: FC<TextProps> = ({ children, variant, ...props }) => (
+const Text: FC<TextProps> = ({ children, variant = 'text', ...props }) => (
   <StyledText variant={variant} {...props}>
     {children}
   </StyledText>

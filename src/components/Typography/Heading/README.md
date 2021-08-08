@@ -31,21 +31,11 @@ A heading text can define its look via defined variants.
 
 *Default:* "title"
 
-### disableMargins
-
-If 'true', the margins is removed.
-
-*Type:* "true" | "false"
-
-*Required:* false
-
-*Default:* false
-
 ### marked
 
 Defines text that should be marked or highlighted.
 
-*Type:* "brandPrimary" | "brandSecondary" | "fonDark" | "fonLight" | "fonGray",
+*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textLight" | "textDark" | "textGray" | "dark" | "light" | "gray" | "fonLight" | "fonDark" | "fonGray"
 
 *Required:* false
 
@@ -55,11 +45,21 @@ Defines text that should be marked or highlighted.
 
 The color of the component.
 
-*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textDark" | "textLight" | "textGray",
+*Type:* "brandPrimary" | "brandSecondary" | "textPrimary" | "textSecondary" | "textLight" | "textDark" | "textGray" | "dark" | "light" | "gray" | "fonLight" | "fonDark" | "fonGray"
 
 *Required:* false
 
 *Default:*
+
+### disableMargins
+
+If 'true', the margins is removed.
+
+*Type:* "true" | "false"
+
+*Required:* false
+
+*Default:* false
 
 ## Intrinsic element
 

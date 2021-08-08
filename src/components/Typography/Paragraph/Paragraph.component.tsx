@@ -10,19 +10,14 @@ export interface ParagraphProps
    * Applies the theme typography styles.
    */
   variant?: 'body';
-  /**
-   * If 'true', the margins is removed.
-   */
-  disableMargins?: boolean;
 }
 
 const Paragraph: FC<ParagraphProps> = ({
   children,
   variant = 'body',
-  disableMargins,
   ...props
 }) => (
-  <StyledParagraph variant={variant} disableMargins={disableMargins} {...props}>
+  <StyledParagraph variant={variant} {...props}>
     {children}
   </StyledParagraph>
 );
