@@ -1,4 +1,5 @@
 import React, { FC, HTMLAttributes } from 'react';
+import { BreakpointName } from '../../../theme/types';
 import StyledContainer from './Container.styles';
 
 export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
@@ -9,7 +10,7 @@ export interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   /**
    * Determine the max-width of the container.
    */
-  maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  maxWidth?: BreakpointName;
 }
 
 const Container: FC<ContainerProps> = ({

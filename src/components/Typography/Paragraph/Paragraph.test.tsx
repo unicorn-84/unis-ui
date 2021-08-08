@@ -10,7 +10,7 @@ describe('<Paragraph />', () => {
         variant="body"
         color="brandPrimary"
         disableMargins
-        marked="fonLight"
+        marked="fonGray"
       >
         Paragraph component
       </Paragraph>,
