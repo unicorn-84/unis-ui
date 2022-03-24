@@ -1,10 +1,8 @@
-# Unis
+# Unis UI
 
 > UI components for react.js websites and apps
 
 ## Installation
-
-You can install Unis using either of the methods given below.
 
 For npm users:
 
