@@ -1,0 +1,6 @@
+dist
+example/dist
+storybook-static
+coverage
+.husky
+.github
