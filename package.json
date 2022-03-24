@@ -33,7 +33,8 @@
     "url": "https://github.com/unicorn-84/unis/issues"
   },
   "scripts": {
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "cm": "cz"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -44,6 +45,12 @@
     ]
   },
   "devDependencies": {
+    "cz-conventional-changelog": "3.3.0",
     "semantic-release": "^19.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
