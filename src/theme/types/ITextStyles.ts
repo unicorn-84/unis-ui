@@ -1,0 +1,16 @@
+import { ColorName } from './IPalette';
+
+export interface ITextStyles {
+  /**
+   * The color of the component.
+   */
+  color?: ColorName;
+  /**
+   * Defines text that should be marked or highlighted.
+   */
+  marked?: ColorName;
+  /**
+   * If 'true', the margins is removed.
+   */
+  disableMargins?: boolean;
+}

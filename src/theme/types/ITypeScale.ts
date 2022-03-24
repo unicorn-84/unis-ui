@@ -118,15 +118,19 @@ export interface ITypeScale {
    */
   subtitle: Partial<ITypeStyle>;
   /**
-   * Arbitrary text.
+   * Body text.
    */
   body: Partial<ITypeStyle>;
   /**
-   * Strong arbitrary text.
+   * Arbitrary text.
+   */
+  text: Partial<ITypeStyle>;
+  /**
+   * Strong text.
    */
   strong: Partial<ITypeStyle>;
   /**
-   * Small arbitrary text.
+   * Small text.
    */
   small: Partial<ITypeStyle>;
   /**
