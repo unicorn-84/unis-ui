@@ -33,10 +33,10 @@
     "format": "prettier -c .",
     "lint": "eslint .",
     "build": "rollup -c",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
-    "test:ci": "jest --coverage --ci",
+    "test:ci": "jest --coverage --ci --passWithNoTests",
     "prepare": "husky install"
   },
   "peerDependencies": {
