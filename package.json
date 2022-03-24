@@ -35,7 +35,7 @@
   "scripts": {
     "semantic-release": "semantic-release",
     "cm": "cz",
-    "format": "prettier -c -w ."
+    "format": "prettier -c ."
   },
   "peerDependencies": {
     "react": ">=16"
