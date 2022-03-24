@@ -15,8 +15,6 @@
     "node": ">=10"
   },
   "keywords": [
-    "@web-uni",
-    "unis",
     "react",
     "components",
     "ui"
