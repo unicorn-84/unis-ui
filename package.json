@@ -1,6 +1,6 @@
 {
   "name": "@web-uni/unis",
-  "version": "0.1.2",
+  "version": "0.0.0-development",
   "description": "UI components for react.js websites and apps",
   "type": "module",
   "exports": {
@@ -27,12 +27,14 @@
   "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/unicorn-84/unis.git"
+    "url": "https://github.com/unicorn-84/unis.git"
   },
   "bugs": {
     "url": "https://github.com/unicorn-84/unis/issues"
   },
-  "scripts": {},
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
   "peerDependencies": {
     "react": ">=16"
   },
@@ -41,5 +43,7 @@
       "<rootDir>/src/setupTests.ts"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "semantic-release": "^19.0.2"
+  }
 }
