@@ -16,10 +16,6 @@ For Yarn users:
   yarn add @web-uni/unis
 ```
 
-## Explore
-
-[Storybook](https://master--6039faf22bc1890023504a43.chromatic.com) examples per component.
-
 ## License
 
 [MIT](https://github.com/unicorn-84/unis/blob/master/LICENSE)
