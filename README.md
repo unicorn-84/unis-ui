@@ -1,6 +1,6 @@
-# Unis UI
+# Unis
 
-> UI components for react.js websites and apps
+> UI components for react.js websites and apps.
 
 ## Installation
 
