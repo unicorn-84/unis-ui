@@ -6,7 +6,7 @@ import BaseButton from '.';
 
 expect.extend(toHaveNoViolations);
 
-describe('<Thing />', () => {
+describe('<BaseButton />', () => {
   test('should render correctly', async () => {
     const onClick = jest.fn();
 
