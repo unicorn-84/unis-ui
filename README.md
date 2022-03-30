@@ -2,6 +2,8 @@
 
 > UI components built with ReactJS and Tailwind CSS.
 
+[![version](https://img.shields.io/npm/v/@web-uni/unis)](https://www.npmjs.com/package/@web-uni/unis) [![build workflow](https://github.com/unicorn-84/unis/actions/workflows/build.yml/badge.svg)](https://github.com/unicorn-84/unis/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/unicorn-84/unis/branch/master/graph/badge.svg?token=JGF2MPS3M9)](https://codecov.io/gh/unicorn-84/unis) [![MIT license](https://img.shields.io/github/license/unicorn-84/unis)](https://github.com/unicorn-84/unis/blob/master/LICENSE) [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 ## What it is
 
 This is ReactJS components with TailwindCSS classes.
