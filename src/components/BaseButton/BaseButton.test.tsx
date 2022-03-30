@@ -26,4 +26,12 @@ describe('<BaseButton />', () => {
 
     expect(results).toHaveNoViolations();
   });
+
+  test('should forward classes to native button', () => {
+    render(<BaseButton className="bg-green-500">Share on Telegram</BaseButton>);
+
+    expect(
+      screen.getByRole('button', { name: 'Share on Telegram' })
+    ).toHaveClass('bg-green-500');
+  });
 });
