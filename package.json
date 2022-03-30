@@ -17,17 +17,18 @@
     "node": ">=14.0.0"
   },
   "keywords": [
-    "react",
-    "tailwind",
+    "reactjs",
+    "tailwindcss",
     "ui",
-    "components"
+    "components",
+    "storybook"
   ],
   "repository": "git@github.com:unicorn-84/unis.git",
   "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
   "bugs": {
     "url": "https://github.com/unicorn-84/unis/issues"
   },
-  "homepage": "https://github.com/unicorn-84/unis#readme",
+  "homepage": "https://unicorn-84.github.io/unis",
   "license": "MIT",
   "scripts": {
     "test": "jest",
