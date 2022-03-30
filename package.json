@@ -36,7 +36,7 @@
     "prebuild": "rimraf lib",
     "build": "tsc",
     "format": "prettier . -c",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx",
     "demo:dev": "cd demo && yarn dev",
     "demo:build": "cd demo && yarn build",
     "demo:preview": "cd demo && yarn preview",
