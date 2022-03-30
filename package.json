@@ -1,94 +1,86 @@
 {
-  "name": "@web-uni/unis",
-  "description": "UI components for react.js websites and apps",
-  "license": "MIT",
-  "version": "0.1.2",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
-  "title": "Uni UI",
-  "module": "dist/unis.esm.js",
+  "name": "unis",
+  "version": "0.0.0-development",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
   "files": [
-    "dist",
-    "src"
+    "lib",
+    "README.md",
+    "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
-    "node": ">=10"
+    "node": ">=14.0.0"
   },
   "keywords": [
-    "@web-uni",
-    "unis",
     "react",
-    "components",
-    "ui"
+    "tailwind",
+    "ui",
+    "components"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/unicorn-84/unis.git"
-  },
+  "repository": "git@github.com:unicorn-84/unis.git",
+  "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
   "bugs": {
     "url": "https://github.com/unicorn-84/unis/issues"
   },
+  "homepage": "https://github.com/unicorn-84/unis#readme",
+  "license": "MIT",
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "test:watch": "tsdx test --watchAll",
-    "test:coverage": "tsdx test --coverage",
-    "lint": "tsdx lint src --fix",
-    "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006 --ci",
-    "build-storybook": "build-storybook",
-    "preversion": "npm run lint && npm test"
+    "test": "jest",
+    "test:ci": "jest --coverage --ci",
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "format": "prettier . -c",
+    "lint": "eslint .",
+    "demo:dev": "cd demo && yarn dev",
+    "demo:build": "cd demo && yarn build",
+    "demo:preview": "cd demo && yarn preview",
+    "semantic-release": "semantic-release",
+    "cm": "cz",
+    "prepare": "husky install"
   },
   "peerDependencies": {
-    "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "tabWidth": 2
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.ts"
-    ]
+    "react": "17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/addons": "^6.2.9",
-    "@storybook/react": "^6.2.9",
-    "@storybook/theming": "^6.2.9",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@types/jest-axe": "^3.5.1",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@types/styled-components": "^5.1.7",
-    "babel-loader": "^8.2.2",
-    "chromatic": "^5.6.3",
-    "husky": "^4.3.8",
-    "jest-axe": "^4.1.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-is": "^17.0.1",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.1.0",
-    "typescript": "^4.1.3"
+    "@testing-library/dom": "8.12.0",
+    "@testing-library/jest-dom": "5.16.3",
+    "@testing-library/react": "12.1.4",
+    "@testing-library/user-event": "14.0.0",
+    "@types/jest": "27.4.1",
+    "@types/jest-axe": "3.5.3",
+    "@types/react": "17.0.43",
+    "@types/react-dom": "17.0.14",
+    "@typescript-eslint/eslint-plugin": "5.17.0",
+    "@typescript-eslint/parser": "5.17.0",
+    "autoprefixer": "10.4.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "8.12.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint-plugin-testing-library": "5.1.0",
+    "husky": "7.0.4",
+    "jest": "27.5.1",
+    "jest-axe": "6.0.0",
+    "postcss": "8.4.12",
+    "prettier": "2.6.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "rimraf": "3.0.2",
+    "semantic-release": "^19.0.2",
+    "tailwindcss": "3.0.23",
+    "ts-jest": "27.1.4",
+    "typescript": "4.6.3"
   },
-  "dependencies": {
-    "styled-components": "^5.2.1"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

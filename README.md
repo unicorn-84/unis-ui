@@ -1,6 +1,6 @@
-# Unis UI
+# unis
 
-> UI components for react.js websites and apps
+> UI components built with ReactJS and Tailwind CSS.
 
 ## Installation
 
