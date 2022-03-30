@@ -2,23 +2,66 @@
 
 > UI components built with ReactJS and Tailwind CSS.
 
-## Installation
+## What it is
 
-For npm users:
+This is ReactJS components with TailwindCSS classes.
+
+## Getting started
+
+### Installation
+
+Using npm:
 
 ```bash
-  npm i @web-uni/unis
+npm install @web-uni/unis
 ```
 
-For Yarn users:
+Using yarn:
 
 ```bash
-  yarn add @web-uni/unis
+yarn add @web-uni/unis
 ```
+
+### Configuration
+
+Add the path to **unis** files in your `tailwind.config.js` file.
+
+```js
+// tailwind.config.js
+...
+content: [
+  ...
+  './node_modules/unis/lib/**/*.{js,jsx,ts,tsx}'
+]
+```
+
+### Usage
+
+```js
+import { Button } from 'unis';
+
+const CustomButton = () => {
+  return <Button>Share on Telegram</Button>;
+};
+```
+
+## Requirements
+
+- The **unis** library is ESM.
+
+- The **unis** library requires [Node.js](https://nodejs.org) version 14 or higher.
+
+- The **unis** library requires [ReactJS](https://reactjs.org) version 16 or higher.
+
+- The **unis** library requires [TailwindCSS](https://tailwindcss.com) version 3 or higher.
+
+## Documentation
+
+See [documentation]().
 
 ## Explore
 
-[Storybook](https://master--6039faf22bc1890023504a43.chromatic.com) examples per component.
+[Storybook]() examples per component.
 
 ## License
 
