@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseButton from '../../src/components/BaseButton/BaseButton';
+import { BaseButton } from '../../src';
 
 const App = () => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
