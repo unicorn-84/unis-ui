@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe, toHaveNoViolations } from 'jest-axe';
 import BaseButton from '.';
+import { BASE_BUTTON } from '../../constants';
 
 expect.extend(toHaveNoViolations);
 
@@ -32,6 +33,6 @@ describe('BaseButton', () => {
 
     expect(
       screen.getByRole('button', { name: 'Share on Telegram' })
-    ).toHaveClass('bg-green-500');
+    ).toHaveClass(BASE_BUTTON + ' bg-green-500');
   });
 });
