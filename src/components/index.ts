@@ -1,1 +1,1 @@
-export { default as BaseButton } from './BaseButton/index.js';
+export { default as Button } from './Button/index.js';
