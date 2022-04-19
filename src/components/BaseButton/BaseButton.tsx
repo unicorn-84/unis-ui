@@ -1,12 +1,12 @@
 import React, { HTMLAttributes } from 'react';
-import { BASE_BUTTON } from '../../constants.js';
+import { BUTTON } from '../../constants.js';
 
 const BaseButton: React.FC<HTMLAttributes<HTMLButtonElement>> = ({
   children,
   className,
   ...props
 }) => {
-  const classes = BASE_BUTTON + (className ? ' ' + className : '');
+  const classes = BUTTON + (className ? ' ' + className : '');
   return (
     <button {...props} className={classes}>
       {children}
