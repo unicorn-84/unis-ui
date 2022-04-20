@@ -1,5 +1,6 @@
 {
-  "name": "unis",
+  "name": "@web-uni/unis",
+  "description": "UI components built with ReactJS and Tailwind CSS",
   "version": "0.0.0-development",
   "type": "module",
   "exports": {
