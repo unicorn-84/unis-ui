@@ -40,9 +40,9 @@ content: [
 ### Usage
 
 ```js
-import { Button } from 'unis';
+import { Button } from '@web-uni/unis';
 
-const CustomButton = () => {
+const App = () => {
   return <Button>Share on Telegram</Button>;
 };
 ```
