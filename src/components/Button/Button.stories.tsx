@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof ButtonComponent> = (args) => (
-  <ButtonComponent {...args}>Share</ButtonComponent>
+  <ButtonComponent {...args}>Button</ButtonComponent>
 );
 
 export const Button = Template.bind({});
