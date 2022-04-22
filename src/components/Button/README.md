@@ -19,16 +19,17 @@ const App = () => {
 Fill color.
 
 **Type:** `primary | secondary | success | info | warning | error`
+
 **Default:** `primary`
+
 **Required:** `false`
 
 #### Examples
 
 ```js
 <Button color="error">Delete</Button>
-<Button color="warning">Cancel</Button>
 ```
 
 ## Explore
 
-[Storybook](https://6039faf22bc1890023504a43-nzdibbpemi.chromatic.com/?path=/story/button--button) examples.
+[Storybook](https://master--6039faf22bc1890023504a43.chromatic.com/?path=/story/button--button) examples.
