@@ -31,6 +31,7 @@ export interface ILinkProps
    * The color of the component.
    * @default 'link'
    */
+
   color?: 'primary' | 'secondary' | 'link';
 
   /**

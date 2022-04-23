@@ -3,20 +3,27 @@ import React from 'react';
 const classes = {
   primary: {
     contained:
-      'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-green-400 hover:bg-green-500 text-white border-2 border-green-400 hover:border-green-500 shadow-md shadow-green-400/30 text-center',
+      'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-emerald-500 hover:bg-emerald-600 text-white border-2 border-emerald-500 hover:border-emerald-600 shadow-md shadow-emerald-500/30 text-center',
     outlined:
-      'rounded px-4 py-2 font-medium tracking-wide border-2 border-green-400 ring-green-400 text-green-400 hover:ring-1 transition-shadow text-center',
-    text: 'font-medium tracking-wide transition-colors text-green-400 hover:text-green-500',
+      'rounded px-4 py-2 font-medium tracking-wide border-2 border-emerald-500 ring-emerald-500 text-emerald-500 hover:ring-1 transition-shadow text-center',
+    text: 'font-medium tracking-wide text-emerald-500',
   },
   secondary: {
     contained:
-      'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-blue-400 hover:bg-blue-500 text-white border-2 border-blue-400 hover:border-blue-500 shadow-md shadow-blue-400/30 text-center',
+      'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-sky-500 hover:bg-sky-600 text-white border-2 border-sky-500 hover:border-sky-600 shadow-md shadow-sky-500/30 text-center',
     outlined:
-      'rounded px-4 py-2 font-medium tracking-wide border-2 border-blue-400 ring-blue-400 text-blue-400 hover:ring-1 transition-shadow text-center',
-    text: 'font-medium tracking-wide transition-colors text-blue-400 hover:text-blue-500',
+      'rounded px-4 py-2 font-medium tracking-wide border-2 border-sky-500 ring-sky-500 text-sky-500 hover:ring-1 transition-shadow text-center',
+    text: 'font-medium tracking-wide text-sky-500',
+  },
+  link: {
+    contained:
+      'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-500 hover:border-blue-600 shadow-md shadow-blue-500/30 text-center',
+    outlined:
+      'rounded px-4 py-2 font-medium tracking-wide border-2 border-blue-500 ring-blue-500 text-blue-500 hover:ring-1 transition-shadow text-center',
+    text: 'font-medium tracking-wide text-blue-500',
   },
   disabled:
-    'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-gray-400 text-white border border-gray-400 shadow-md shadow-gray-400/30 text-center',
+    'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-gray-400 text-white border-2 border-gray-400 shadow-md shadow-gray-400/30 text-center',
 };
 
 export interface IButtonProps
@@ -31,7 +38,7 @@ export interface IButtonProps
    * The color of the component.
    * @default 'primary'
    */
-  color?: 'primary' | 'secondary';
+  color?: 'primary' | 'secondary' | 'link';
 
   /**
    * The variant to use.

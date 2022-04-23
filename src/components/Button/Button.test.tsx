@@ -61,6 +61,14 @@ describe('Button', () => {
         screen.getByRole('button', { name: 'Share on Telegram' })
       ).toBeVisible();
     });
+
+    test('should render a link button', () => {
+      render(<Button color="link">Share on Telegram</Button>);
+
+      expect(
+        screen.getByRole('button', { name: 'Share on Telegram' })
+      ).toBeVisible();
+    });
   });
 
   describe('props: variant', () => {
