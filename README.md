@@ -59,7 +59,7 @@ const App = () => {
 
 ## Documentation
 
-Check out the [documentation website](https://unicorn-84.github.io/unis).
+Check out [the documentation website](https://unicorn-84.github.io/unis).
 
 ## Explore
 
