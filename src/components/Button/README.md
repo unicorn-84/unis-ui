@@ -46,6 +46,22 @@ The variant to use.
 <Button variant="outlined">Reset</Button>
 ```
 
+### `disabled`
+
+If `true`, the component is disabled.
+
+**Type:** `boolean`
+
+**Default:** `false`
+
+**Required:** `false`
+
+#### Examples
+
+```js
+<Button disabled>Accept</Button>
+```
+
 ## Explore
 
 [Storybook](https://master--6039faf22bc1890023504a43.chromatic.com/?path=/story/button--button) examples.
