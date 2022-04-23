@@ -15,6 +15,13 @@ const classes = {
     outlined:
       'inline-block rounded px-4 py-2 font-medium tracking-wide border-2 border-sky-500 ring-sky-500 text-sky-500 hover:ring-1 transition-shadow text-center',
   },
+  link: {
+    text: 'tracking-wide text-blue-500',
+    contained:
+      'inline-block rounded px-4 py-2 font-medium tracking-wide transition-colors bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-500 hover:border-blue-600 shadow-md shadow-blue-500/30 text-center',
+    outlined:
+      'inline-block rounded px-4 py-2 font-medium tracking-wide border-2 border-blue-500 ring-blue-500 text-blue-500 hover:ring-1 transition-shadow text-center',
+  },
   underline: 'underline underline-offset-2',
 };
 
@@ -22,9 +29,9 @@ export interface ILinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   /**
    * The color of the component.
-   * @default 'primary'
+   * @default 'link'
    */
-  color?: 'primary' | 'secondary';
+  color?: 'primary' | 'secondary' | 'link';
 
   /**
    * The variant to use.
@@ -46,7 +53,7 @@ export interface ILinkProps
 const Link: React.FC<ILinkProps> = ({
   children,
   className = '',
-  color = 'primary',
+  color = 'link',
   variant = 'text',
   underlined = true,
   href,

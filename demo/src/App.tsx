@@ -21,7 +21,7 @@ const App = () => {
           nisi et enim id quidem quod eius, cum porro deserunt aperiam a sit
           ullam iusto similique, perspiciatis totam at mollitia libero
           laboriosam ut. Praesentium{' '}
-          <Link href="" color="secondary">
+          <Link href="" color="link">
             perferendis
           </Link>{' '}
           distinctio ut modi nostrum, assumenda suscipit eius itaque laudantium
