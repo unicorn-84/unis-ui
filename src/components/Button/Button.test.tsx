@@ -62,4 +62,30 @@ describe('Button', () => {
       ).toBeVisible();
     });
   });
+
+  describe('props: variant', () => {
+    test('should render a contained button', () => {
+      render(<Button variant="contained">Share on Telegram</Button>);
+
+      expect(
+        screen.getByRole('button', { name: 'Share on Telegram' })
+      ).toBeVisible();
+    });
+
+    test('should render a outlined button', () => {
+      render(<Button variant="outlined">Share on Telegram</Button>);
+
+      expect(
+        screen.getByRole('button', { name: 'Share on Telegram' })
+      ).toBeVisible();
+    });
+
+    test('should render a text button', () => {
+      render(<Button variant="text">Share on Telegram</Button>);
+
+      expect(
+        screen.getByRole('button', { name: 'Share on Telegram' })
+      ).toBeVisible();
+    });
+  });
 });

@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from '../../src';
+import { Button } from '../../src';
 
 const App = () => {
   return (
     <div className="container max-w-xl m-auto px-4 mt-10 transition">
       <div className="space-x-4 flex">
-        <Link href="" variant="contained" className="flex-1">
+        <Button variant="outlined" className="flex-1">
           Submit
-        </Link>
+        </Button>
 
-        <Link href="" variant="contained" color="secondary" className="flex-1">
+        <Button variant="outlined" color="secondary" className="flex-1">
           Reset
-        </Link>
+        </Button>
       </div>
     </div>
   );

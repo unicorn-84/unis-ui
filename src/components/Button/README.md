@@ -30,6 +30,22 @@ Fill color.
 <Button color="secondary">Share on Telegram</Button>
 ```
 
+### `variant`
+
+The variant to use.
+
+**Type:** `contained | outlined | text`
+
+**Default:** `contained`
+
+**Required:** `false`
+
+#### Examples
+
+```js
+<Button variant="outlined">Reset</Button>
+```
+
 ## Explore
 
 [Storybook](https://master--6039faf22bc1890023504a43.chromatic.com/?path=/story/button--button) examples.
