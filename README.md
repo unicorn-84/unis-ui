@@ -33,8 +33,17 @@ Add the path to **unis** files in your `tailwind.config.js` file.
 ...
 content: [
   ...
-  './node_modules/unis/lib/**/*.{js,jsx,ts,tsx}'
+  './node_modules/@web-uni/unis/lib/**/*.{js,jsx,ts,tsx}'
 ]
+```
+
+Or use the Play CDN without any build step.
+
+```html
+<head>
+  ...
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 ```
 
 ### Usage
