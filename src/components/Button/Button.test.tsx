@@ -37,11 +37,7 @@ describe('Button', () => {
 
   describe('props: disabled', () => {
     test('should forward it to native buttons', () => {
-      render(
-        <Button disabled color="error">
-          Share on Telegram
-        </Button>
-      );
+      render(<Button disabled>Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -60,38 +56,6 @@ describe('Button', () => {
 
     test('should render a secondary button', () => {
       render(<Button color="secondary">Share on Telegram</Button>);
-
-      expect(
-        screen.getByRole('button', { name: 'Share on Telegram' })
-      ).toBeVisible();
-    });
-
-    test('should render a success button', () => {
-      render(<Button color="success">Share on Telegram</Button>);
-
-      expect(
-        screen.getByRole('button', { name: 'Share on Telegram' })
-      ).toBeVisible();
-    });
-
-    test('should render a info button', () => {
-      render(<Button color="info">Share on Telegram</Button>);
-
-      expect(
-        screen.getByRole('button', { name: 'Share on Telegram' })
-      ).toBeVisible();
-    });
-
-    test('should render a warning button', () => {
-      render(<Button color="warning">Share on Telegram</Button>);
-
-      expect(
-        screen.getByRole('button', { name: 'Share on Telegram' })
-      ).toBeVisible();
-    });
-
-    test('should render a error button', () => {
-      render(<Button color="error">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })

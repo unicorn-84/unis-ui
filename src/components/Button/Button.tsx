@@ -2,18 +2,11 @@ import React from 'react';
 
 const classes = {
   primary:
-    'rounded px-4 py-2 text-sm font-medium tracking-wide transition-colors bg-emerald-600 text-white hover:bg-emerald-700',
+    'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-green-400 hover:bg-green-500 text-white border border-green-400 hover:border-green-500 shadow-md shadow-green-400/30 text-center',
   secondary:
-    'rounded px-4 py-2 text-sm font-medium tracking-wide transition-colors bg-sky-600 text-white hover:bg-sky-700',
-  success:
-    'rounded px-4 py-2 text-sm font-medium tracking-wide transition-colors bg-green-500 text-white hover:bg-green-600',
-  info: 'rounded px-4 py-2 text-sm font-medium tracking-wide transition-colors bg-blue-500 text-white hover:bg-blue-600',
-  warning:
-    'rounded px-4 py-2 text-sm font-medium tracking-wide transition-colors bg-yellow-500 text-white hover:bg-yellow-600',
-  error:
-    'rounded px-4 py-2 text-sm font-medium tracking-wide transition-colors bg-red-500 text-white hover:bg-red-600',
+    'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-blue-400 hover:bg-blue-500 text-white border border-blue-400 hover:border-blue-500 shadow-md shadow-blue-400/30 text-center',
   disabled:
-    'rounded px-4 py-2 text-sm font-medium tracking-wide transition-colors bg-gray-400 text-white',
+    'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-gray-400 text-white border border-gray-400 shadow-md shadow-gray-400/30 text-center',
 };
 
 export interface IButtonProps
@@ -28,7 +21,7 @@ export interface IButtonProps
    * The color of the component.
    * @default 'primary'
    */
-  color?: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error';
+  color?: 'primary' | 'secondary';
 }
 
 const Button: React.FC<IButtonProps> = ({

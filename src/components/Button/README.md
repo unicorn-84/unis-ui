@@ -8,7 +8,7 @@
 import { Button } from '@web-uni/unis';
 
 const App = () => {
-  return <Button color="info">Share on Telegram</Button>;
+  return <Button color="secondary">Share on Telegram</Button>;
 };
 ```
 
@@ -18,7 +18,7 @@ const App = () => {
 
 Fill color.
 
-**Type:** `primary | secondary | success | info | warning | error`
+**Type:** `primary | secondary`
 
 **Default:** `primary`
 
@@ -27,7 +27,7 @@ Fill color.
 #### Examples
 
 ```js
-<Button color="error">Delete</Button>
+<Button color="secondary">Share on Telegram</Button>
 ```
 
 ## Explore
