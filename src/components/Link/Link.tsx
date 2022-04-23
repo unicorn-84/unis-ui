@@ -25,15 +25,18 @@ export interface ILinkProps
    * @default 'primary'
    */
   color?: 'primary' | 'secondary';
+
   /**
    * The variant to use.
    * @default 'text'
    */
   variant?: 'text' | 'contained' | 'outlined';
+
   /**
    * The decorative line on text.
    */
   underlined?: boolean;
+
   /**
    * The URL to link.
    */

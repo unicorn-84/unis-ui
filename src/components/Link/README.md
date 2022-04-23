@@ -54,6 +54,20 @@ The variant to use.
 </Link>
 ```
 
+### `href`
+
+The URL to link.
+
+**Type:** `string`
+
+**Required:** `true`
+
+#### Examples
+
+```js
+<Link href="https://developer.mozilla.org">mdn</Link>
+```
+
 ## Explore
 
 [Storybook](https://master--6039faf22bc1890023504a43.chromatic.com/?path=/story/link--link) examples.
