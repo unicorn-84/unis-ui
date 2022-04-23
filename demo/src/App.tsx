@@ -1,18 +1,17 @@
 import React from 'react';
-import { Button } from '../../src';
+import { Link } from '../../src';
 
 const App = () => {
   return (
-    <div className="container max-w-3xl m-auto px-4 mt-10 transition">
-      <div className="space-x-2 space-y-2">
-        <Button disabled>Share on Telegram</Button>
-        <Button>Share on Telegram</Button>
-        <Button color="primary">Share on Telegram</Button>
-        <Button color="secondary">Share on Telegram</Button>
-        <Button color="success">Share on Telegram</Button>
-        <Button color="info">Share on Telegram</Button>
-        <Button color="warning">Share on Telegram</Button>
-        <Button color="error">Delete</Button>
+    <div className="container max-w-xl m-auto px-4 mt-10 transition">
+      <div className="space-x-4 flex">
+        <Link href="" variant="contained" className="flex-1">
+          Submit
+        </Link>
+
+        <Link href="" variant="contained" color="secondary" className="flex-1">
+          Reset
+        </Link>
       </div>
     </div>
   );
