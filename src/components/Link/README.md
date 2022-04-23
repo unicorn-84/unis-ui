@@ -22,9 +22,9 @@ const App = () => {
 
 Fill color.
 
-**Type:** `primary | secondary`
+**Type:** `link | primary | secondary`
 
-**Default:** `primary`
+**Default:** `link`
 
 **Required:** `false`
 

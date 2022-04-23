@@ -55,6 +55,16 @@ describe('Link', () => {
 
       expect(screen.getByRole('link', { name: 'MDN' })).toBeVisible();
     });
+
+    test('should render a link link', () => {
+      render(
+        <Link href="https://developer.mozilla.org" color="link">
+          MDN
+        </Link>
+      );
+
+      expect(screen.getByRole('link', { name: 'MDN' })).toBeVisible();
+    });
   });
 
   describe('props: variant', () => {

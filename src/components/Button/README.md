@@ -18,7 +18,7 @@ const App = () => {
 
 Fill color.
 
-**Type:** `primary | secondary`
+**Type:** `primary | secondary | link`
 
 **Default:** `primary`
 
