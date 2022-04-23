@@ -15,6 +15,13 @@ const classes = {
       'rounded px-4 py-2 font-medium tracking-wide border-2 border-sky-500 ring-sky-500 text-sky-500 hover:ring-1 transition-shadow text-center',
     text: 'font-medium tracking-wide text-sky-500',
   },
+  link: {
+    contained:
+      'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-500 hover:border-blue-600 shadow-md shadow-blue-500/30 text-center',
+    outlined:
+      'rounded px-4 py-2 font-medium tracking-wide border-2 border-blue-500 ring-blue-500 text-blue-500 hover:ring-1 transition-shadow text-center',
+    text: 'font-medium tracking-wide text-blue-500',
+  },
   disabled:
     'rounded px-4 py-2 font-medium tracking-wide transition-colors bg-gray-400 text-white border-2 border-gray-400 shadow-md shadow-gray-400/30 text-center',
 };
@@ -31,7 +38,7 @@ export interface IButtonProps
    * The color of the component.
    * @default 'primary'
    */
-  color?: 'primary' | 'secondary';
+  color?: 'primary' | 'secondary' | 'link';
 
   /**
    * The variant to use.
