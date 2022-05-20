@@ -13,24 +13,23 @@ describe('Input', () => {
   });
 
   test('should have no accessibility violations', async () => {
-    const { container } = render(<Input label="Text Field" />);
+    const { container } = render(<Input placeholder="Your name" />);
 
     const results = await axe(container);
 
     expect(results).toHaveNoViolations();
   });
 
-  test('should forward classes to native button', () => {
+  test('should forward classes to native input', () => {
     render(<Input className="smth" />);
-
     expect(screen.getByRole('textbox')).toHaveClass('smth');
   });
 
-  describe('props: label', () => {
-    test('should render a input label', () => {
-      render(<Input label="Passwords" />);
+  // describe('props: label', () => {
+  //   test('should render a input label', () => {
+  //     render(<Input label="Passwords" />);
 
-      expect(screen.getByRole('textbox', { name: 'Passwords' })).toBeVisible();
-    });
-  });
+  //     expect(screen.getByRole('textbox', { name: 'Passwords' })).toBeVisible();
+  //   });
+  // });
 });

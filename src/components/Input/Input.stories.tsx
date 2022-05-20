@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof InputComponent>;
 
 const Template: ComponentStory<typeof InputComponent> = (args) => (
-  <InputComponent {...args}>Link</InputComponent>
+  <InputComponent {...args} className="" />
 );
 
 export const Input = Template.bind({});
