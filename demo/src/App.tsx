@@ -1,19 +1,36 @@
 import React from 'react';
-import { Input, Button } from '../../src';
+import { InputLabel, InputText } from '../../src';
 
 const App = () => {
   return (
     <div className="container max-w-sm m-auto px-4 mt-10 transition">
       <form className="space-y-6">
-        <div className="space-y-3">
+        <div className="space-y-4">
           <div>
-            <Input />
+            <InputLabel label="Email" color="#000" />
           </div>
           <div>
-            <Input disabled value={'Name'} />
+            <InputLabel label="Email">
+              <InputText />
+            </InputLabel>
           </div>
           <div>
-            <Input placeholder="Please, enter your name" />
+            <InputText />
+          </div>
+          <div>
+            <InputText disabled />
+          </div>
+          <div>
+            <InputText placeholder="Please, enter your name" />
+          </div>
+          <div>
+            <InputText />
+          </div>
+          <div>
+            <InputText />
+          </div>
+          <div>
+            <InputText />
           </div>
         </div>
       </form>
