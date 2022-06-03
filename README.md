@@ -1,4 +1,4 @@
-# unis
+# 🦄 unis
 
 > UI components built with ReactJS and Tailwind CSS.
 
