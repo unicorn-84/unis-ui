@@ -1,2 +1,3 @@
-export { default as InputText } from './InputText/index.js';
-export { default as InputLabel } from './Label/index.js';
+export { default as InputBase } from './InputBase/index.js';
+export { default as InputTextLabel } from './InputTextLabel/index.js';
+export { default as InputTextHint } from './InputTextHint/index.js';

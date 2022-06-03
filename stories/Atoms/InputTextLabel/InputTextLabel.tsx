@@ -1,6 +1,7 @@
 import React from 'react';
 
-interface ILabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
+interface IInputTextLabelProps
+  extends React.LabelHTMLAttributes<HTMLLabelElement> {
   /**
    * The label text.
    */
@@ -11,35 +12,28 @@ interface ILabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
    * @default 'md'
    */
   size?: 'sm' | 'md';
-
-  /**
-   * The color of the component.
-   */
-  color?: string;
 }
 
-const Label: React.FC<ILabelProps> = ({
-  // eslint-disable-next-line react/prop-types
+const InputTextLabel: React.FC<IInputTextLabelProps> = ({
   className,
   children,
   label,
   size = 'md',
-  color,
   ...props
 }) => {
   return (
     <label
       className={
+        'text-[#101828] ' +
         `${size === 'sm' ? 'text-sm font-normal' : 'text-base font-medium'}` +
-        (color ? ` text-[${color}]` : '') +
         (className ? ` ${className}` : '')
       }
       {...props}
     >
-      {label}
+      <span>{label}</span>
       {children}
     </label>
   );
 };
 
-export default Label;
+export default InputTextLabel;
