@@ -1,6 +1,6 @@
 # InputText
 
-> An text input.
+> A text input.
 
 ## API
 
@@ -10,7 +10,7 @@ The label text.
 
 **Type:** `string`
 
-**Required:** `true`
+**Required:** `false`
 
 #### Examples
 
