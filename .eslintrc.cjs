@@ -11,6 +11,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:testing-library/react',
+    'plugin:storybook/recommended',
     'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',

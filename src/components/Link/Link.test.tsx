@@ -24,7 +24,7 @@ describe('Link', () => {
 
     expect(results).toHaveNoViolations();
   });
-
+  //FIXME: change to `label`
   test('should forward classes to native button', () => {
     render(
       <Link href="https://developer.mozilla.org" className="smth">
