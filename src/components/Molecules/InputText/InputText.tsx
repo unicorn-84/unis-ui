@@ -25,7 +25,7 @@ interface IInputTextProps
   error?: boolean;
 
   /**
-   * The error message.
+   * The error message. Required the error.
    */
   errorMessage?: string;
 

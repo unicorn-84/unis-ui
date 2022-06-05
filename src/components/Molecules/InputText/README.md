@@ -52,7 +52,7 @@ If true, the component is displayed in an error state.
 
 ### `errorMessage`
 
-The error message.
+The error message. Required the error.
 
 **Type:** `string`
 
@@ -95,6 +95,34 @@ The helper text. Required the label.
   helperText="This is an assistive text for the user"
   label="Username"
 />
+```
+
+### `labelClass`
+
+Classes applied to the native label.
+
+**Type:** `string`
+
+**Required:** `false`
+
+#### Examples
+
+```js
+<InputText label="Username" labelClass="class" />
+```
+
+### `id`
+
+The id of the native input element.
+
+**Type:** `string`
+
+**Required:** `false`
+
+#### Examples
+
+```js
+<InputText id="username" />
 ```
 
 ## Explore
