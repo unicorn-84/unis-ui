@@ -16,7 +16,6 @@ interface IInputTextLabelProps
 
 const InputTextLabel: React.FC<IInputTextLabelProps> = ({
   className,
-  children,
   label,
   size = 'md',
   ...props
@@ -30,8 +29,7 @@ const InputTextLabel: React.FC<IInputTextLabelProps> = ({
       }
       {...props}
     >
-      <span>{label}</span>
-      {children}
+      {label}
     </label>
   );
 };

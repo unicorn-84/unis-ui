@@ -30,10 +30,20 @@ interface IInputTextProps
   errorMessage?: string;
 
   /**
-   * If `true`, the component is disabled.
+   * If true, the component is disabled.
    * @default false
    */
   disabled?: boolean;
+
+  /**
+   * Classes applied to the native label.
+   */
+  labelClass?: string;
+
+  /**
+   * The id of the native input element.
+   */
+  id?: string;
 }
 
 const InputText: React.FC<IInputTextProps> = ({
@@ -44,49 +54,33 @@ const InputText: React.FC<IInputTextProps> = ({
   size = 'md',
   helperText,
   disabled = false,
+  labelClass,
+  id,
   ...props
 }) => {
-  if (label) {
-    return (
-      <InputTextLabel
-        label={label}
-        size={size}
-        className={
-          'inline-flex flex-col ' +
-          (size === 'sm' ? 'space-y-1' : 'space-y-[6px]')
-        }
-      >
-        {helperText && <InputTextHint text={helperText} />}
-        <InputBase
-          className={className}
-          size={size}
-          error={Boolean(error)}
-          disabled={disabled}
-          {...props}
-        />
-        {errorMessage && !disabled && (
-          <InputTextHint text={errorMessage} error={error} />
-        )}
-      </InputTextLabel>
-    );
-  }
   return (
-    <>
+    <div className={size === 'sm' ? 'space-y-1' : 'space-y-[6px]'}>
+      {label && (
+        <InputTextLabel
+          label={label}
+          size={size}
+          htmlFor={id}
+          className={labelClass ? ` ${labelClass}` : ''}
+        />
+      )}
+      {helperText && label && <InputTextHint text={helperText} />}
       <InputBase
         className={className}
         size={size}
         error={Boolean(error)}
         disabled={disabled}
+        id={id}
         {...props}
       />
-      {errorMessage && !disabled && (
-        <InputTextHint
-          text={errorMessage}
-          error={error}
-          className={size === 'sm' ? 'mt-1' : 'mt-[6px]'}
-        />
+      {errorMessage && error && !disabled && (
+        <InputTextHint text={errorMessage} error={error} />
       )}
-    </>
+    </div>
   );
 };
 
