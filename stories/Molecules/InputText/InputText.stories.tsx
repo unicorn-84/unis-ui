@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof InputTextComponent>;
 
 const Template: ComponentStory<typeof InputTextComponent> = (args) => (
-  <InputTextComponent {...args} />
+  <InputTextComponent {...args} className="max-w-xs" />
 );
 
 export const InputText = Template.bind({});

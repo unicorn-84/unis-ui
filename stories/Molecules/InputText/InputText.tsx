@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputBase, InputTextHint, InputTextLabel } from '../../Atoms/index.js';
+import { InputBase, InputTextHint, InputTextLabel } from '../../Atoms';
 
 interface IInputTextProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
