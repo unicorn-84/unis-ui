@@ -114,6 +114,7 @@ Classes applied to the native label.
 ### `id`
 
 The id of the native input element.
+Use this prop to make label accessible for screen readers.
 
 **Type:** `string`
 
@@ -122,7 +123,7 @@ The id of the native input element.
 #### Examples
 
 ```js
-<InputText id="username" />
+<InputText id="username" label="Username" />
 ```
 
 ## Explore
