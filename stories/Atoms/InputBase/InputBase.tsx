@@ -30,7 +30,7 @@ const InputBase: React.FC<IInputBaseProps> = ({
           ? 'border-[#bb251a] hover:border-[#bb251a] focus:border-[#912018] '
           : 'border-[#98a2b3] hover:border-[#667085] focus:border-[#0354a6] ') +
         (size === 'sm' ? 'text-sm py-1 ' : 'text-base py-2 ') +
-        'rounded-[4px] transition hover:shadow-sm text-base text-[#101828] px-4 outline-none  disabled:shadow-none disabled:text-slate-500 disabled:border-[#d0d5dd] disabled:bg-[#f2f4f7] placeholder:text-[#98a2b3]' +
+        'block w-full rounded-[4px] transition hover:shadow-sm text-base text-[#101828] px-4 outline-none  disabled:shadow-none disabled:text-slate-500 disabled:border-[#d0d5dd] disabled:bg-[#f2f4f7] placeholder:text-[#98a2b3]' +
         (className ? ` ${className}` : '')
       }
       {...props}
