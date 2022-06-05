@@ -10,14 +10,12 @@ describe('InputTextLabel', () => {
       </InputTextLabel>
     );
 
-    expect(screen.getByRole('textbox', { name: 'Username' })).toBeVisible();
+    expect(screen.getByText('Username')).toBeVisible();
   });
 
   test('should forward classes', () => {
     render(
-      <InputTextLabel data-testid="testid" label="Username" className="class">
-        <input />
-      </InputTextLabel>
+      <InputTextLabel data-testid="testid" label="Username" className="class" />
     );
 
     expect(screen.getByTestId('testid')).toHaveClass('class');
@@ -25,11 +23,7 @@ describe('InputTextLabel', () => {
 
   describe('props: label', () => {
     test('should render correctly', () => {
-      render(
-        <InputTextLabel label="Username">
-          <input />
-        </InputTextLabel>
-      );
+      render(<InputTextLabel label="Username" />);
 
       expect(screen.getByText('Username')).toBeVisible();
     });
@@ -37,11 +31,7 @@ describe('InputTextLabel', () => {
 
   describe('props: size', () => {
     test('should render correctly', () => {
-      render(
-        <InputTextLabel label="Username" size="sm">
-          <input />
-        </InputTextLabel>
-      );
+      render(<InputTextLabel label="Username" size="sm" />);
 
       expect(screen.getByText('Username')).toBeVisible();
     });
