@@ -41,12 +41,12 @@ const ButtonBase: React.FC<IButtonBaseProps> = ({
       className={
         'rounded transition-colors outline-none font-medium ' +
         (size === 'md'
-          ? 'px-5 py-[0.45rem] text-base '
+          ? 'px-[calc(1.25rem-1px)] py-[calc(0.5rem-1px)] text-base '
           : size === 'sm'
-          ? 'px-4 py-[0.45rem] text-sm '
+          ? 'px-[calc(1rem-1px)] py-[calc(0.5rem-1px)] text-sm '
           : size === 'xs'
-          ? 'px-4 py-[0.45rem] text-xs '
-          : 'px-6 py-[0.7rem] text-base ') +
+          ? 'px-[calc(1rem-1px)] py-[calc(0.5rem-1px)] text-xs '
+          : 'px-[calc(1.5rem-1px)] py-[calc(0.75rem-1px)] text-base ') +
         (destructive === false
           ? variant === 'primary'
             ? 'border border-1 border-[#0354a6] bg-[#0354a6] text-white hover:border-[#064280] hover:bg-[#064280] hover:shadow focus:border-[#064280] focus:bg-[#064280] disabled:bg-[#9ec8f1] disabled:border-[#9ec8f1] disabled:shadow-none '
