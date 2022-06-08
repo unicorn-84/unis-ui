@@ -5,7 +5,7 @@ interface IIconProps extends React.HTMLAttributes<HTMLSpanElement> {
    * The size of the component.
    * @default 'md'
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
 
   /**
    * An icon element.
@@ -23,7 +23,7 @@ const Icon: React.FC<IIconProps> = ({
     <span
       className={
         'inline-block ' +
-        (size === 'md' ? 'h-6 w-6' : size === 'sm' ? 'h-4 w-4' : 'h-8 w-8') +
+        (size === 'md' || size === 'lg' ? 'h-6 w-6' : 'h-4 w-4') +
         (className ? ` ${className}` : '')
       }
       {...props}
