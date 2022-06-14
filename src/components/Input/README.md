@@ -1,6 +1,6 @@
-# InputText
+# Input
 
-> A text input.
+> An input.
 
 ## API
 
@@ -15,7 +15,7 @@ The label text.
 #### Examples
 
 ```js
-<InputText label="Username" />
+<Input label="Username" />
 ```
 
 ### `size`
@@ -31,7 +31,7 @@ The size of the component.
 #### Examples
 
 ```js
-<InputText size="sm" />
+<Input size="sm" />
 ```
 
 ### `error`
@@ -47,7 +47,7 @@ If true, the component is displayed in an error state.
 #### Examples
 
 ```js
-<InputText error />
+<Input error />
 ```
 
 ### `errorMessage`
@@ -61,7 +61,7 @@ The error message. Required the error.
 #### Examples
 
 ```js
-<InputText error errorMessage="Validation message text" />
+<Input error errorMessage="Validation message text" />
 ```
 
 ### `disabled`
@@ -77,7 +77,7 @@ If true, the component is disabled.
 #### Examples
 
 ```js
-<InputText disabled />
+<Input disabled />
 ```
 
 ### `helperText`
@@ -91,10 +91,7 @@ The helper text. Required the label.
 #### Examples
 
 ```js
-<InputText
-  helperText="This is an assistive text for the user"
-  label="Username"
-/>
+<Input helperText="This is an assistive text for the user" label="Username" />
 ```
 
 ### `labelClass`
@@ -108,7 +105,7 @@ Classes applied to the native label.
 #### Examples
 
 ```js
-<InputText label="Username" labelClass="class" />
+<Input label="Username" labelClass="class" />
 ```
 
 ### `id`
@@ -123,9 +120,21 @@ Use this prop to make label accessible for screen readers.
 #### Examples
 
 ```js
-<InputText id="username" label="Username" />
+<Input id="username" label="Username" />
 ```
 
-## Explore
+### `type`
 
-[Storybook](https://master--6039faf22bc1890023504a43.chromatic.com/?path=/story/inputtext--input-text) examples.
+Type of the `input` element.
+
+**Type:** `text | email | password`
+
+**Required:** `false`
+
+**Default:** `text`
+
+#### Examples
+
+```js
+<Input type="email" />
+```

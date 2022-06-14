@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputBase, InputTextHint, InputTextLabel } from '../../Atoms';
+import { InputTextHint, InputTextLabel } from '../index.js';
 
 interface IInputTextProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
@@ -25,7 +25,7 @@ interface IInputTextProps
   error?: boolean;
 
   /**
-   * The error message.
+   * The error message. Required the error.
    */
   errorMessage?: string;
 
@@ -44,6 +44,12 @@ interface IInputTextProps
    * The id of the native input element.
    */
   id?: string;
+
+  /**
+   * Type of the `input` element.
+   * @default 'text'
+   */
+  type?: 'text' | 'email' | 'password';
 }
 
 const InputText: React.FC<IInputTextProps> = ({
@@ -56,6 +62,7 @@ const InputText: React.FC<IInputTextProps> = ({
   disabled = false,
   labelClass,
   id,
+  type = 'text',
   ...props
 }) => {
   return (
@@ -69,12 +76,19 @@ const InputText: React.FC<IInputTextProps> = ({
         />
       )}
       {helperText && label && <InputTextHint text={helperText} />}
-      <InputBase
-        className={className}
-        size={size}
-        error={Boolean(error)}
+      <input
+        type={type}
         disabled={disabled}
         id={id}
+        className={
+          'border ' +
+          (error
+            ? 'border-[#bb251a] hover:border-[#bb251a] focus:border-[#912018] '
+            : 'border-[#98a2b3] hover:border-[#667085] focus:border-[#0354a6] ') +
+          (size === 'sm' ? 'text-sm py-1 ' : 'text-base py-2 ') +
+          'block w-full rounded-[4px] transition hover:shadow-sm text-base text-[#101828] px-4 outline-none  disabled:shadow-none disabled:text-slate-500 disabled:border-[#d0d5dd] disabled:bg-[#f2f4f7] placeholder:text-[#98a2b3]' +
+          (className ? ` ${className}` : '')
+        }
         {...props}
       />
       {errorMessage && error && !disabled && (
