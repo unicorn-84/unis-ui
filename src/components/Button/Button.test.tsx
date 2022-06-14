@@ -2,17 +2,17 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { axe, toHaveNoViolations } from 'jest-axe';
-import ButtonBase from '.';
+import Button from '.';
 
 expect.extend(toHaveNoViolations);
 
-describe('ButtonBase', () => {
+describe('Button', () => {
   test('should render correctly', async () => {
     const onClick = jest.fn();
 
     const user = userEvent.setup();
 
-    render(<ButtonBase onClick={onClick}>Share on Telegram</ButtonBase>);
+    render(<Button onClick={onClick}>Share on Telegram</Button>);
 
     await user.click(screen.getByRole('button', { name: 'Share on Telegram' }));
 
@@ -20,7 +20,7 @@ describe('ButtonBase', () => {
   });
 
   test('should have no accessibility violations', async () => {
-    const { container } = render(<ButtonBase>Share on Telegram</ButtonBase>);
+    const { container } = render(<Button>Share on Telegram</Button>);
 
     const results = await axe(container);
 
@@ -28,7 +28,7 @@ describe('ButtonBase', () => {
   });
 
   test('should forward classes to the native button', () => {
-    render(<ButtonBase className="class">Share on Telegram</ButtonBase>);
+    render(<Button className="class">Share on Telegram</Button>);
 
     expect(
       screen.getByRole('button', { name: 'Share on Telegram' })
@@ -37,7 +37,7 @@ describe('ButtonBase', () => {
 
   describe('props: disabled', () => {
     test('should forward it to the native button', () => {
-      render(<ButtonBase disabled>Share on Telegram</ButtonBase>);
+      render(<Button disabled>Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -47,7 +47,7 @@ describe('ButtonBase', () => {
 
   describe('props: variant', () => {
     test('should render the primary button', () => {
-      render(<ButtonBase variant="primary">Share on Telegram</ButtonBase>);
+      render(<Button variant="primary">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -55,9 +55,7 @@ describe('ButtonBase', () => {
     });
 
     test('should render the outline primary button', () => {
-      render(
-        <ButtonBase variant="outline primary">Share on Telegram</ButtonBase>
-      );
+      render(<Button variant="outline primary">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -65,7 +63,7 @@ describe('ButtonBase', () => {
     });
 
     test('should render the outline gray button', () => {
-      render(<ButtonBase variant="outline gray">Share on Telegram</ButtonBase>);
+      render(<Button variant="outline gray">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -73,7 +71,7 @@ describe('ButtonBase', () => {
     });
 
     test('should render the ghost button', () => {
-      render(<ButtonBase variant="ghost">Share on Telegram</ButtonBase>);
+      render(<Button variant="ghost">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -83,7 +81,7 @@ describe('ButtonBase', () => {
 
   describe('props: size', () => {
     test('should render the xs button', () => {
-      render(<ButtonBase size="xs">Share on Telegram</ButtonBase>);
+      render(<Button size="xs">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -91,7 +89,7 @@ describe('ButtonBase', () => {
     });
 
     test('should render the sm button', () => {
-      render(<ButtonBase size="sm">Share on Telegram</ButtonBase>);
+      render(<Button size="sm">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -99,7 +97,7 @@ describe('ButtonBase', () => {
     });
 
     test('should render the md button', () => {
-      render(<ButtonBase size="md">Share on Telegram</ButtonBase>);
+      render(<Button size="md">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -107,7 +105,7 @@ describe('ButtonBase', () => {
     });
 
     test('should render the lg button', () => {
-      render(<ButtonBase size="lg">Share on Telegram</ButtonBase>);
+      render(<Button size="lg">Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -117,7 +115,7 @@ describe('ButtonBase', () => {
 
   describe('props: fullWidth', () => {
     test('should render the full width button', () => {
-      render(<ButtonBase fullWidth>Share on Telegram</ButtonBase>);
+      render(<Button fullWidth>Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -127,7 +125,7 @@ describe('ButtonBase', () => {
 
   describe('props: destructive', () => {
     test('should render the destructive button', () => {
-      render(<ButtonBase destructive>Share on Telegram</ButtonBase>);
+      render(<Button destructive>Share on Telegram</Button>);
 
       expect(
         screen.getByRole('button', { name: 'Share on Telegram' })
@@ -138,7 +136,7 @@ describe('ButtonBase', () => {
   describe('props: iconStart', () => {
     test('should render the icon element placed before the children', () => {
       render(
-        <ButtonBase
+        <Button
           iconStart={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +155,7 @@ describe('ButtonBase', () => {
           }
         >
           Share on Telegram
-        </ButtonBase>
+        </Button>
       );
 
       expect(screen.getByTestId('test')).toBeVisible();
@@ -167,7 +165,7 @@ describe('ButtonBase', () => {
   describe('props: iconEnd', () => {
     test('should render the icon element placed after the children', () => {
       render(
-        <ButtonBase
+        <Button
           iconEnd={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -186,14 +184,14 @@ describe('ButtonBase', () => {
           }
         >
           Share on Telegram
-        </ButtonBase>
+        </Button>
       );
 
       expect(screen.getByTestId('test')).toBeVisible();
     });
     test('should not render the icon element if `iconStart` is present', () => {
       render(
-        <ButtonBase
+        <Button
           iconStart={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +225,7 @@ describe('ButtonBase', () => {
           }
         >
           Share on Telegram
-        </ButtonBase>
+        </Button>
       );
 
       expect(screen.queryByTestId('test')).not.toBeInTheDocument();

@@ -1,8 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 
-interface IButtonBaseProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The variant of the component.
    * @default primary
@@ -38,7 +37,7 @@ interface IButtonBaseProps
   iconEnd?: React.ReactNode;
 }
 
-const ButtonBase: React.FC<IButtonBaseProps> = ({
+const Button: React.FC<IButtonProps> = ({
   children,
   className,
   variant = 'primary',
@@ -52,7 +51,7 @@ const ButtonBase: React.FC<IButtonBaseProps> = ({
   return (
     <button
       className={
-        'rounded transition-colors outline-none font-medium inline-flex items-center ' +
+        'rounded transition-colors outline-none font-medium inline-flex items-center justify-center ' +
         (size === 'md'
           ? `${
               children ? 'px-[1.1875rem]' : 'px-[0.4375rem]'
@@ -107,4 +106,4 @@ const ButtonBase: React.FC<IButtonBaseProps> = ({
   );
 };
 
-export default ButtonBase;
+export default Button;
