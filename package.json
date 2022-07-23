@@ -23,8 +23,7 @@
     "reactjs",
     "tailwindcss",
     "ui",
-    "components",
-    "storybook"
+    "components"
   ],
   "repository": "git@github.com:unicorn-84/unis.git",
   "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
@@ -46,8 +45,6 @@
     "semantic-release": "semantic-release",
     "cm": "cz",
     "prepare": "husky install",
-    "sb": "start-storybook -p 6006 --ci",
-    "build-storybook": "build-storybook",
     "chromatic": "chromatic"
   },
   "peerDependencies": {
@@ -74,7 +71,6 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.4",
-    "eslint-plugin-storybook": "0.5.12",
     "eslint-plugin-testing-library": "5.1.0",
     "husky": "7.0.4",
     "jest": "27.5.1",

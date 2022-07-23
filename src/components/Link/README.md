@@ -67,7 +67,3 @@ The URL to link.
 ```js
 <Link href="https://developer.mozilla.org">mdn</Link>
 ```
-
-## Explore
-
-[Storybook](https://master--6039faf22bc1890023504a43.chromatic.com/?path=/story/link--link) examples.
