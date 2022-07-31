@@ -81,6 +81,10 @@ A destructive style of the button.
 ### `iconStart`
 
 Element placed before the children.
+For `xs` buttons - 16x16 bounding box.
+For `sm` buttons - 16x16 bounding box.
+For `md` buttons - 24x24 bounding box.
+For `lg` buttons - 24x24 bounding box.
 
 **Type:** `ReactNode`
 
@@ -111,6 +115,10 @@ Element placed before the children.
 
 Element placed after the children.
 Do not use with `iconStart`.
+For `xs` buttons - 16x16 bounding box.
+For `sm` buttons - 16x16 bounding box.
+For `md` buttons - 24x24 bounding box.
+For `lg` buttons - 24x24 bounding box.
 
 **Type:** `ReactNode`
 

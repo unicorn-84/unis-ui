@@ -335,6 +335,11 @@
     react-refresh "^0.11.0"
     resolve "^1.22.0"
 
+"@web-uni/unis-icons@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@web-uni/unis-icons/-/unis-icons-1.0.0.tgz#820d578fc89d2564f69b2610c3407049333c2030"
+  integrity sha512-r1eJeiAomJZFYoqUBMecqA6F5BcmjIqgSahlCtqAvTjfsW6XP/mMBeg1zEABYS0nt9YHXWF89Jd8vs0k6zOHOg==
+
 acorn-node@^1.6.1:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/acorn-node/-/acorn-node-1.8.2.tgz#114c95d64539e53dede23de8b9d96df7c7ae2af8"
