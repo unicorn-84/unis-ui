@@ -28,11 +28,19 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
   /**
    * Element placed before the children.
+   * xs - 16x16 bounding box
+   * sm - 16x16 bounding box
+   * md - 24x24 bounding box
+   * lg - 24x24 bounding box
    */
   iconStart?: React.ReactNode;
 
   /**
    * Element placed after the children.
+   * xs - 16x16 bounding box
+   * sm - 16x16 bounding box
+   * md - 24x24 bounding box
+   * lg - 24x24 bounding box
    */
   iconEnd?: React.ReactNode;
 }
@@ -96,11 +104,19 @@ const Button: React.FC<IButtonProps> = ({
       {...props}
     >
       {iconStart && (
-        <Icon icon={iconStart} size={size} className={children ? 'mr-2' : ''} />
+        <Icon
+          icon={iconStart}
+          size={size === 'md' || size === 'lg' ? 'sm' : 'xs'}
+          className={children ? 'mr-2' : ''}
+        />
       )}
       {children}
       {!iconStart && iconEnd && (
-        <Icon icon={iconEnd} size={size} className={children ? 'ml-2' : ''} />
+        <Icon
+          icon={iconEnd}
+          size={size === 'md' || size === 'lg' ? 'sm' : 'xs'}
+          className={children ? 'ml-2' : ''}
+        />
       )}
     </button>
   );
