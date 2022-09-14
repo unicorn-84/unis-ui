@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../Icon';
+import { Icon } from '../index.js';
 
 interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
