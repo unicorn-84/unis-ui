@@ -7,12 +7,7 @@ module.exports = {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
   transform: {
-    '\\.(ts|tsx)$': 'ts-jest',
-  },
-  globals: {
-    'ts-jest': {
-      useESM: true,
-    },
+    '\\.(ts|tsx)$': ['ts-jest', { useESM: true }],
   },
   clearMocks: true,
 };
