@@ -1,5 +1,5 @@
 {
-  "name": "@web-uni/unis",
+  "name": "unis-ui",
   "description": "UI components built with ReactJS and Tailwind CSS",
   "version": "0.0.0-development",
   "type": "module",
@@ -25,12 +25,12 @@
     "ui",
     "components"
   ],
-  "repository": "git@github.com:unicorn-84/unis.git",
+  "repository": "https://github.com/unicorn-84/unis-ui.git",
   "author": "unicorn-84 <unicorn-84@ya.ru> (https://github.com/unicorn-84)",
   "bugs": {
-    "url": "https://github.com/unicorn-84/unis/issues"
+    "url": "https://github.com/unicorn-84/unis-ui/issues"
   },
-  "homepage": "https://unicorn-84.github.io/unis",
+  "homepage": "https://unicorn-84.github.io/unis-ui",
   "license": "MIT",
   "scripts": {
     "test": "jest",

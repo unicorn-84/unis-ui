@@ -1,8 +1,8 @@
-# 🦄 unis
+# 🦄 unis-ui
 
 > UI components built with ReactJS and Tailwind CSS.
 
-[![version](https://img.shields.io/npm/v/@web-uni/unis)](https://www.npmjs.com/package/@web-uni/unis) [![build workflow](https://github.com/unicorn-84/unis/actions/workflows/build.yml/badge.svg)](https://github.com/unicorn-84/unis/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/unicorn-84/unis/branch/master/graph/badge.svg?token=JGF2MPS3M9)](https://codecov.io/gh/unicorn-84/unis) [![MIT license](https://img.shields.io/github/license/unicorn-84/unis)](https://github.com/unicorn-84/unis/blob/master/LICENSE) [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![version](https://img.shields.io/npm/v/unis-ui)](https://www.npmjs.com/package/unis-ui) [![build workflow](https://github.com/unicorn-84/unis-ui/actions/workflows/build.yml/badge.svg)](https://github.com/unicorn-84/unis-ui/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/unicorn-84/unis-ui/branch/master/graph/badge.svg?token=JGF2MPS3M9)](https://codecov.io/gh/unicorn-84/unis-ui) [![MIT license](https://img.shields.io/github/license/unicorn-84/unis-ui)](https://github.com/unicorn-84/unis-ui/blob/master/LICENSE) [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 ## What it is
 
@@ -15,32 +15,32 @@ This is ReactJS components with TailwindCSS classes.
 Using npm:
 
 ```bash
-npm install @web-uni/unis
+npm i unis-ui
 ```
 
 Using yarn:
 
 ```bash
-yarn add @web-uni/unis
+yarn add unis-ui
 ```
 
 ### Configuration
 
-Add the path to **unis** files in your `tailwind.config.js` file.
+Add the path to **unis-ui** files in your `tailwind.config.js` file.
 
 ```js
 // tailwind.config.js
 ...
 content: [
   ...
-  './node_modules/@web-uni/unis/lib/**/*.{js,jsx,ts,tsx}'
+  './node_modules/unis-ui/lib/**/*.{js,jsx,ts,tsx}'
 ]
 ```
 
 ### Usage
 
 ```js
-import { Button } from '@web-uni/unis';
+import { Button } from 'unis-ui';
 
 const App = () => {
   return <Button>Share on Telegram</Button>;
@@ -49,18 +49,14 @@ const App = () => {
 
 ## Requirements
 
-- The **unis** library is ESM.
+- The **unis-ui** library is ESM.
 
-- The **unis** library requires [Node.js](https://nodejs.org) version 14 or higher.
+- The **unis-ui** library requires [Node.js](https://nodejs.org) version 14 or higher.
 
-- The **unis** library requires [ReactJS](https://reactjs.org) version 16 or higher.
+- The **unis-ui** library requires [ReactJS](https://reactjs.org) version 16 or higher.
 
-- The **unis** library requires [TailwindCSS](https://tailwindcss.com) version 3 or higher.
-
-## Documentation
-
-Check out [the documentation website](https://unicorn-84.github.io/unis).
+- The **unis-ui** library requires [TailwindCSS](https://tailwindcss.com) version 3 or higher.
 
 ## License
 
-[MIT](https://github.com/unicorn-84/unis/blob/master/LICENSE)
+[MIT](https://github.com/unicorn-84/unis-ui/blob/master/LICENSE)

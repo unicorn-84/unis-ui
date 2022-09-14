@@ -5,7 +5,7 @@
 ## Usage
 
 ```js
-import { Button } from '@web-uni/unis';
+import { Button } from 'unis-ui';
 
 const App = () => {
   return <Button>Share on Telegram</Button>;

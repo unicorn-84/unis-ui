@@ -5,7 +5,7 @@
 ## Usage
 
 ```js
-import { Icon } from '@web-uni/unis';
+import { Icon } from 'unis-ui';
 
 const App = () => {
   return (

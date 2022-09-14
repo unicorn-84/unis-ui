@@ -5,7 +5,7 @@
 ## Usage
 
 ```js
-import { Link } from '@web-uni/unis';
+import { Link } from 'unis-ui';
 
 const App = () => {
   return (
